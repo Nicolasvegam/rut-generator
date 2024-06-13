@@ -17,20 +17,20 @@ export default function Home() {
   return (
     <div className="max-w-2xl mx-auto my-12 p-8 bg-white shadow-lg rounded-3xl">
       <div>
-        <h1 className="text-4xl font-bold mb-4 text-blue-600">
+        <h1 className="text-4xl font-bold mb-4 text-blue-600 text-center sm:text-left">
           Generador de RUT
         </h1>
-        <p className="mb-6 text-gray-600">
+        <p className="mb-6 text-gray-600 text-center sm:text-left">
           Genera RUTs al azar con este generador. Haz click en un RUT para
           copiarlo al portapapeles.
         </p>
         <Button
           onClick={() => generateRuts()}
-          className="bg-blue-500 text-white px-6 py-2 mb-8 rounded-full hover:bg-blue-600"
+          className="bg-blue-500 text-white px-6 py-2 mb-8 rounded-full hover:bg-blue-600 w-full sm:w-auto"
         >
           Generar más RUTs al azar
         </Button>
-        <div className="grid grid-cols-3 gap-4 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
           {ruts.map((rut, index) => (
             <div
               key={index}
@@ -39,7 +39,7 @@ export default function Home() {
                 navigator.clipboard.writeText(rut.number + "-" + rut.mod)
               }
             >
-              <p className="text-lg font-bold text-gray-800">
+              <p className="text-lg font-bold text-gray-800 text-center">
                 {rut.number.toLocaleString("cl-ES")}
                 <span className="text-lg text-gray-800">-{rut.mod}</span>
               </p>
