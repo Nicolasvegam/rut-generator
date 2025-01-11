@@ -14,7 +14,7 @@ class RutGenerator {
   private input: string = "";
   private lastInput: string = "";
   private rutOpts: RutOpts = {
-    quantity: 12,
+    quantity: 35,
     minValue: 1000000,
     maxValue: 40000000,
   };
@@ -47,7 +47,7 @@ class RutGenerator {
       }
 
       this.lastInput = this.getInput();
-      this.ruts = genRuts;
+      this.ruts = genRuts.sort((a, b) => a.number - b.number);
     }
     return this.ruts;
   }

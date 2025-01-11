@@ -6,7 +6,7 @@ import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Generador de RUT Chileno - Genera RUTs válidos al azar",
   description:
     "Genera RUTs chilenos válidos de forma aleatoria. Herramienta gratuita para generar RUTs con dígito verificador.",
@@ -30,9 +30,17 @@ export const metadata = {
     index: true,
     follow: true,
   },
-  canonical: "https://rut-generator.vercel.app/",
-  locale: "es_CL",
-  themeColor: "#3B82F6",
+  themeColor: "#578E7E",
+  icons: {
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
+  },
+  alternates: {
+    canonical: "https://rut-generator.vercel.app/",
+  },
 };
 
 export default function RootLayout({
@@ -42,7 +50,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body>
+      <body className={`${inter.className} bg-[#FFFAEC]`}>
         {children}
         <Analytics />
       </body>
