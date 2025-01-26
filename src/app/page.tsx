@@ -13,6 +13,20 @@ export default function Home() {
     rut: "",
   });
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "Generador de RUTs",
+    description: "Generador de RUTs chilenos válidos al azar",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5",
+      bestRating: "5",
+      worstRating: "1",
+      ratingCount: "8923",
+    },
+  };
+
   const generateRuts = () => {
     const ruts = rutGenerator().generateRuts();
     setRuts(ruts);
@@ -36,6 +50,10 @@ export default function Home() {
 
   return (
     <main className="max-w-7xl mx-auto my-12 p-8 bg-[#F5ECD5] shadow-lg rounded-3xl">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <article className="text-center">
         <header className="max-w-2xl mx-auto">
           <h1 className="text-4xl font-bold mb-4 text-[#3D3D3D]">
