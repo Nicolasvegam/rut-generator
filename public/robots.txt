@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rut.nicovega.dev/sitemap.xml 
+Sitemap: https://rutificador.nicovega.dev/sitemap.xml 

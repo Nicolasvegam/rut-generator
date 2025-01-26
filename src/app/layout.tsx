@@ -1,10 +1,14 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Karla } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react";
 
-const inter = Inter({ subsets: ["latin"] });
+const karla = Karla({ subsets: ["latin"] });
+
+export const viewport: Viewport = {
+  themeColor: "#578E7E",
+};
 
 export const metadata: Metadata = {
   title: "Generador de RUT Chileno - Genera RUTs válidos al azar",
@@ -30,7 +34,6 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  themeColor: "#578E7E",
   icons: {
     icon: [
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
@@ -50,7 +53,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={`${inter.className} bg-[#FFFAEC]`}>
+      <body className={`${karla.className} bg-[#FFFAEC]`}>
         {children}
         <Analytics />
       </body>

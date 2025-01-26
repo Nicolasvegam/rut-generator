@@ -42,8 +42,7 @@ export default function Home() {
             Generador de RUT Chileno
           </h1>
           <p className="mb-6 text-[#3D3D3D]/80">
-            Genera RUTs chilenos válidos al azar con este generador. Haz click
-            en un RUT para copiarlo al portapapeles.
+            Genera RUTs chilenos válidos al azar con este generador.
           </p>
         </header>
 
@@ -81,6 +80,9 @@ export default function Home() {
                 RUT con puntos
               </Button>
             </div>
+            <p className="text-sm text-[#3D3D3D]/60">
+              Haz click en un RUT para copiarlo al portapapeles.
+            </p>
           </div>
 
           <div
@@ -117,14 +119,14 @@ export default function Home() {
         <FAQs />
 
         <footer className="text-sm text-[#3D3D3D]/60 mt-12">
-          Desarrollado y diseñado por{" "}
+          Hecho con ❤️ por{" "}
           <Link
-            href="https://www.nicovega.dev"
+            href="https://software.nicovega.dev"
             className="text-[#578E7E] hover:text-[#578E7E]/80"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Nicolás Vega
+            Di Monk
           </Link>
         </footer>
       </article>
