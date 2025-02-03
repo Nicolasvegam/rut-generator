@@ -49,17 +49,17 @@ export default function Home() {
   };
 
   return (
-    <main className="max-w-7xl mx-auto my-12 p-8 bg-[#F5ECD5] shadow-lg rounded-3xl">
+    <main className="max-w-7xl mx-auto my-12 px-4 sm:px-6 lg:px-8">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <article className="text-center">
+      <article className="text-center bg-[#F8F8F8] p-8 rounded-2xl">
         <header className="max-w-2xl mx-auto">
-          <h1 className="text-4xl font-bold mb-4 text-[#3D3D3D]">
+          <h1 className="text-4xl font-bold mb-4 text-[#212121]">
             Generador de RUT Chileno
           </h1>
-          <p className="mb-6 text-[#3D3D3D]/80">
+          <p className="mb-8 text-[#333333]">
             Genera RUTs chilenos válidos al azar con este generador.
           </p>
         </header>
@@ -68,19 +68,19 @@ export default function Home() {
           <div className="w-full max-w-2xl mb-8 space-y-6">
             <Button
               onClick={generateRuts}
-              className="bg-[#578E7E] text-[#FFFAEC] px-10 py-6 rounded-2xl hover:bg-[#578E7E]/90 text-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-200 min-w-[280px] border-2 border-[#578E7E]/20"
+              className="bg-[#0033A0] text-white px-10 py-6 rounded-xl hover:bg-[#1a47b8] text-xl font-semibold shadow-sm hover:shadow-md transition-all duration-200 min-w-[280px]"
               aria-label="Generar nuevos RUTs aleatorios"
             >
               Generar más RUTs al azar
             </Button>
 
-            <div className="flex gap-3 justify-center border-t border-[#578E7E]/20 pt-6">
+            <div className="flex gap-3 justify-center border-t border-[#F2F2F2] pt-6">
               <Button
                 onClick={() => setShowDots(false)}
                 className={`px-6 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${
                   !showDots
-                    ? "bg-[#578E7E] text-[#FFFAEC] hover:bg-[#578E7E]/90 shadow-md"
-                    : "bg-[#FFFAEC] text-[#3D3D3D] hover:bg-[#FFFAEC]/80 border-2 border-[#578E7E]/20"
+                    ? "bg-[#0033A0] text-white hover:bg-[#1a47b8] shadow-sm"
+                    : "bg-white text-[#212121] hover:bg-[#F8F8F8] border-2 border-[#F2F2F2]"
                 }`}
                 aria-label="Mostrar RUTs sin puntos"
               >
@@ -90,15 +90,15 @@ export default function Home() {
                 onClick={() => setShowDots(true)}
                 className={`px-6 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${
                   showDots
-                    ? "bg-[#578E7E] text-[#FFFAEC] hover:bg-[#578E7E]/90 shadow-md"
-                    : "bg-[#FFFAEC] text-[#3D3D3D] hover:bg-[#FFFAEC]/80 border-2 border-[#578E7E]/20"
+                    ? "bg-[#0033A0] text-white hover:bg-[#1a47b8] shadow-sm"
+                    : "bg-white text-[#212121] hover:bg-[#F8F8F8] border-2 border-[#F2F2F2]"
                 }`}
                 aria-label="Mostrar RUTs con puntos"
               >
                 RUT con puntos
               </Button>
             </div>
-            <p className="text-sm text-[#3D3D3D]/60">
+            <p className="text-sm text-[#333333]/60">
               Haz click en un RUT para copiarlo al portapapeles.
             </p>
           </div>
@@ -114,17 +114,17 @@ export default function Home() {
               return (
                 <div
                   key={index}
-                  className="bg-[#FFFAEC] p-4 rounded-xl cursor-pointer hover:bg-[#FFFAEC]/80 transition-all duration-200 shadow-sm hover:shadow-md border-2 border-[#578E7E]/10 relative group"
+                  className="bg-white p-4 rounded-xl cursor-pointer hover:bg-[#F8F8F8] transition-all duration-200 shadow-sm hover:shadow-md border-2 border-[#F2F2F2] relative group"
                   onClick={() => handleCopyRut(rutString)}
                   role="listitem"
                   aria-label={`RUT ${rutString}, click para copiar`}
                 >
-                  <p className="text-lg font-bold text-[#3D3D3D] text-center group-hover:text-[#578E7E]">
+                  <p className="text-lg font-bold text-[#212121] text-center group-hover:text-[#0033A0]">
                     {formatRut(rut.number)}
-                    <span className="text-lg text-[#578E7E]">-{rut.mod}</span>
+                    <span className="text-lg text-[#0033A0]">-{rut.mod}</span>
                   </p>
                   {toast.show && toast.rut === rutString && (
-                    <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-[#578E7E] text-[#FFFAEC] px-4 py-2 rounded-lg text-sm shadow-lg animate-fade-in-down">
+                    <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-[#0033A0] text-white px-4 py-2 rounded-lg text-sm shadow-md">
                       Copiado
                     </div>
                   )}
@@ -133,21 +133,22 @@ export default function Home() {
             })}
           </div>
         </section>
-
-        <FAQs />
-
-        <footer className="text-sm text-[#3D3D3D]/60 mt-12">
-          Hecho con ❤️ por{" "}
-          <Link
-            href="https://software.nicovega.dev"
-            className="text-[#578E7E] hover:text-[#578E7E]/80"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Di Monk
-          </Link>
-        </footer>
+        <div className="mt-2 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-8">
+          <FAQs />
+        </div>
       </article>
+
+      <footer className="text-sm text-[#333333]/60 mt-12 text-center">
+        Hecho con ❤️ por{" "}
+        <Link
+          href="https://software.nicovega.dev"
+          className="text-[#0033A0] hover:text-[#1a47b8]"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Di Monk
+        </Link>
+      </footer>
     </main>
   );
 }

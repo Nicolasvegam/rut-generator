@@ -1,4 +1,7 @@
+# Allow all crawlers
 User-agent: *
 Allow: /
+Allow: /validar
 
+# Sitemap location
 Sitemap: https://rutificador.nicovega.dev/sitemap.xml 
