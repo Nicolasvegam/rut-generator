@@ -1,12 +1,12 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import rutGenerator, { Rut } from "../../lib/shared/rut-generator.service";
+import rutGenerator, { Rut } from "../../../lib/shared/rut-generator.service";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { FAQs } from "@/components/FAQs";
 import { RelatedTools } from "@/components/RelatedTools";
 
-export default function Home() {
+export default function RutAlAzar() {
   const [ruts, setRuts] = useState<Rut[]>([]);
   const [showDots, setShowDots] = useState(true);
   const [toast, setToast] = useState<{ show: boolean; rut: string }>({
@@ -17,10 +17,10 @@ export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    name: "Generador de RUT Chileno",
+    name: "RUT al Azar - Generador de RUTs Chilenos Aleatorios",
     description:
-      "Herramienta gratuita para generar RUTs chilenos válidos al azar",
-    url: "https://nicovega.dev/rutificador",
+      "Genera RUTs chilenos completamente al azar con dígito verificador válido. Herramienta gratuita para crear RUTs aleatorios.",
+    url: "https://nicovega.dev/rutificador/rut-al-azar",
     applicationCategory: "UtilityApplication",
     operatingSystem: "Web Browser",
     offers: {
@@ -33,12 +33,7 @@ export default function Home() {
       ratingValue: "4.8",
       bestRating: "5",
       worstRating: "1",
-      ratingCount: "8923",
-    },
-    author: {
-      "@type": "Person",
-      name: "Di Monk",
-      url: "https://software.nicovega.dev",
+      ratingCount: "5234",
     },
   };
 
@@ -72,11 +67,12 @@ export default function Home() {
       <article className="text-center bg-[#F8F8F8] p-8 rounded-2xl">
         <header className="max-w-2xl mx-auto">
           <h1 className="text-4xl font-bold mb-4 text-[#212121]">
-            Generador de RUT Chileno - Crear RUTs Válidos al Azar
+            RUT al Azar - Generador de RUTs Chilenos Aleatorios
           </h1>
           <p className="mb-8 text-[#333333]">
-            Genera RUTs chilenos válidos al azar gratis. Herramienta para crear
-            RUTs de Chile con dígito verificador correcto.
+            Genera RUTs chilenos completamente al azar con dígito verificador
+            válido. Herramienta gratuita para crear RUTs aleatorios para pruebas
+            y desarrollo.
           </p>
         </header>
 
@@ -87,7 +83,7 @@ export default function Home() {
               className="bg-[#0033A0] text-white px-10 py-6 rounded-xl hover:bg-[#1a47b8] text-xl font-semibold shadow-sm hover:shadow-md transition-all duration-200 min-w-[280px]"
               aria-label="Generar nuevos RUTs aleatorios"
             >
-              Generar más RUTs al azar
+              Generar RUTs al Azar
             </Button>
 
             <div className="flex gap-3 justify-center border-t border-[#F2F2F2] pt-6">
@@ -149,6 +145,30 @@ export default function Home() {
             })}
           </div>
         </section>
+
+        <section className="mt-12 text-left">
+          <h2 className="text-2xl font-bold mb-6 text-[#212121]">
+            ¿Qué es un RUT al Azar?
+          </h2>
+          <div className="bg-white p-6 rounded-xl shadow-sm">
+            <p className="text-[#333333] mb-4">
+              Un <strong>RUT al azar</strong> es un número de identificación
+              chileno que se genera de forma completamente aleatoria, pero que
+              mantiene la validez matemática según el algoritmo oficial chileno.
+            </p>
+            <p className="text-[#333333] mb-4">
+              Nuestro generador de RUTs al azar crea números que:
+            </p>
+            <ul className="list-disc list-inside text-[#333333] space-y-2 ml-4">
+              <li>Tienen un dígito verificador correcto</li>
+              <li>Siguen el formato oficial chileno</li>
+              <li>Son matemáticamente válidos</li>
+              <li>No corresponden a personas reales</li>
+              <li>Son ideales para pruebas y desarrollo</li>
+            </ul>
+          </div>
+        </section>
+
         <div className="mt-2 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-8">
           <FAQs />
         </div>

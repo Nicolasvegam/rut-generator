@@ -8,8 +8,10 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { name: "Generar RUT", href: "/" },
-    { name: "Validar RUT", href: "/validar" },
+    { name: "Generador RUT", href: "/" },
+    { name: "Validador RUT", href: "/validar" },
+    { name: "RUT al Azar", href: "/rut-al-azar" },
+    { name: "Creador RUT", href: "/creador-rut" },
   ];
 
   return (

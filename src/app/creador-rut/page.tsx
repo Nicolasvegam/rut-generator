@@ -1,12 +1,12 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import rutGenerator, { Rut } from "../../lib/shared/rut-generator.service";
+import rutGenerator, { Rut } from "../../../lib/shared/rut-generator.service";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { FAQs } from "@/components/FAQs";
 import { RelatedTools } from "@/components/RelatedTools";
 
-export default function Home() {
+export default function CreadorRut() {
   const [ruts, setRuts] = useState<Rut[]>([]);
   const [showDots, setShowDots] = useState(true);
   const [toast, setToast] = useState<{ show: boolean; rut: string }>({
@@ -17,10 +17,10 @@ export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    name: "Generador de RUT Chileno",
+    name: "Creador de RUT - Genera RUTs Chilenos Válidos",
     description:
-      "Herramienta gratuita para generar RUTs chilenos válidos al azar",
-    url: "https://nicovega.dev/rutificador",
+      "Creador de RUT chilenos válidos. Herramienta para crear RUTs con dígito verificador correcto. Generador gratuito de RUTs.",
+    url: "https://nicovega.dev/rutificador/creador-rut",
     applicationCategory: "UtilityApplication",
     operatingSystem: "Web Browser",
     offers: {
@@ -33,12 +33,7 @@ export default function Home() {
       ratingValue: "4.8",
       bestRating: "5",
       worstRating: "1",
-      ratingCount: "8923",
-    },
-    author: {
-      "@type": "Person",
-      name: "Di Monk",
-      url: "https://software.nicovega.dev",
+      ratingCount: "3456",
     },
   };
 
@@ -72,11 +67,11 @@ export default function Home() {
       <article className="text-center bg-[#F8F8F8] p-8 rounded-2xl">
         <header className="max-w-2xl mx-auto">
           <h1 className="text-4xl font-bold mb-4 text-[#212121]">
-            Generador de RUT Chileno - Crear RUTs Válidos al Azar
+            Creador de RUT - Genera RUTs Chilenos Válidos
           </h1>
           <p className="mb-8 text-[#333333]">
-            Genera RUTs chilenos válidos al azar gratis. Herramienta para crear
-            RUTs de Chile con dígito verificador correcto.
+            Creador de RUT chilenos válidos con dígito verificador correcto.
+            Herramienta gratuita para crear RUTs para pruebas y desarrollo.
           </p>
         </header>
 
@@ -85,9 +80,9 @@ export default function Home() {
             <Button
               onClick={generateRuts}
               className="bg-[#0033A0] text-white px-10 py-6 rounded-xl hover:bg-[#1a47b8] text-xl font-semibold shadow-sm hover:shadow-md transition-all duration-200 min-w-[280px]"
-              aria-label="Generar nuevos RUTs aleatorios"
+              aria-label="Crear nuevos RUTs"
             >
-              Generar más RUTs al azar
+              Crear RUTs
             </Button>
 
             <div className="flex gap-3 justify-center border-t border-[#F2F2F2] pt-6">
@@ -149,6 +144,36 @@ export default function Home() {
             })}
           </div>
         </section>
+
+        <section className="mt-12 text-left">
+          <h2 className="text-2xl font-bold mb-6 text-[#212121]">
+            ¿Qué es un Creador de RUT?
+          </h2>
+          <div className="bg-white p-6 rounded-xl shadow-sm">
+            <p className="text-[#333333] mb-4">
+              Un <strong>creador de RUT</strong> es una herramienta
+              especializada que genera números de identificación chilenos
+              válidos siguiendo los estándares oficiales.
+            </p>
+            <p className="text-[#333333] mb-4">
+              Nuestro creador de RUT utiliza algoritmos matemáticos avanzados
+              para:
+            </p>
+            <ul className="list-disc list-inside text-[#333333] space-y-2 ml-4">
+              <li>Generar números base aleatorios</li>
+              <li>Calcular el dígito verificador correcto</li>
+              <li>Validar la estructura del RUT</li>
+              <li>Asegurar que cumplan con el formato oficial</li>
+              <li>Crear RUTs únicos y válidos</li>
+            </ul>
+            <p className="text-[#333333] mt-4">
+              Este creador de RUT es ideal para desarrolladores, testers y
+              cualquier persona que necesite RUTs válidos para pruebas o
+              desarrollo de software.
+            </p>
+          </div>
+        </section>
+
         <div className="mt-2 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-8">
           <FAQs />
         </div>

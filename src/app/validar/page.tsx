@@ -4,6 +4,7 @@ import { useState } from "react";
 import rutify from "@/lib/utils/rut-formatter";
 import { isValidChileanRut } from "@/lib/utils/rut-validator";
 import { ValidarFAQs } from "@/components/ValidarFAQs";
+import { RelatedTools } from "@/components/RelatedTools";
 import Link from "next/link";
 
 export default function ValidarRut() {
@@ -129,6 +130,8 @@ export default function ValidarRut() {
         <div className="mt-16 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-16">
           <ValidarFAQs />
         </div>
+
+        <RelatedTools />
       </article>
 
       <footer className="text-sm text-[#333333]/60 mt-12 text-center">
