@@ -11,7 +11,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://rutificador.nicovega.dev"),
+  metadataBase: new URL("https://nicovega.dev/rutificador"),
   title: {
     default: "Generador y Validador de RUT Chileno",
     template: "%s | RUT Chile",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: "Generador y Validador de RUT Chileno",
     description:
       "Herramienta gratuita para generar y validar RUTs chilenos. Genera RUTs válidos al azar y verifica la validez de cualquier RUT.",
-    url: "https://rutificador.nicovega.dev/",
+    url: "https://nicovega.dev/rutificador/",
     siteName: "RUT Chile",
     locale: "es_CL",
     type: "website",
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://rutificador.nicovega.dev/",
+    canonical: "https://nicovega.dev/rutificador/",
   },
   verification: {
     google: "google-site-verification-code", // Add your Google verification code here
