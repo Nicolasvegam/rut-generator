@@ -56,9 +56,9 @@ export function FAQs() {
           </AccordionTrigger>
           <AccordionContent className="text-[#333333]">
             Para generar RUTs chilenos al azar, simplemente haz clic en el botón
-            "Generar más RUTs al azar". Nuestro creador de RUT automáticamente
-            generará 15 nuevos RUTs válidos con dígitos verificadores correctos.
-            Puedes generar tantos RUTs como necesites.
+            &ldquo;Generar más RUTs al azar&rdquo;. Nuestro creador de RUT
+            automáticamente generará 15 nuevos RUTs válidos con dígitos
+            verificadores correctos. Puedes generar tantos RUTs como necesites.
           </AccordionContent>
         </AccordionItem>
 
@@ -118,9 +118,9 @@ export function FAQs() {
           </AccordionTrigger>
           <AccordionContent className="text-[#333333]">
             Sí, nuestro generador de RUTs chilenos crea 15 RUTs válidos
-            simultáneamente. Cada vez que hagas clic en "Generar más RUTs al
-            azar", obtendrás un nuevo conjunto de RUTs únicos con dígitos
-            verificadores correctos.
+            simultáneamente. Cada vez que hagas clic en &ldquo;Generar más RUTs
+            al azar&rdquo;, obtendrás un nuevo conjunto de RUTs únicos con
+            dígitos verificadores correctos.
           </AccordionContent>
         </AccordionItem>
 
