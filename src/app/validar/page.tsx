@@ -5,6 +5,7 @@ import rutify from "@/lib/utils/rut-formatter";
 import { isValidChileanRut } from "@/lib/utils/rut-validator";
 import { ValidarFAQs } from "@/components/ValidarFAQs";
 import { RelatedTools } from "@/components/RelatedTools";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import Link from "next/link";
 
 export default function ValidarRut() {
@@ -51,6 +52,7 @@ export default function ValidarRut() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <Breadcrumbs />
       <article className="text-center bg-[#F8F8F8] p-8 rounded-2xl">
         <header className="max-w-2xl mx-auto">
           <h1 className="text-4xl font-bold mb-4 text-[#212121]">
