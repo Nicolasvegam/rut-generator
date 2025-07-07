@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a **Chilean RUT (Rol Único Tributario) Generator** - a Next.js web application that generates, validates, and formats Chilean national identification numbers. The app is live at `https://nicovega.dev/rutificador`.
+This is a **Chilean RUT (Rol Único Tributario) Generator** - a Next.js web application that generates, validates, and formats Chilean national identification numbers. The app is live at `https://www.rutschile.com`.
 
 ## Development Commands
 

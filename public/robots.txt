@@ -4,4 +4,4 @@ Allow: /
 Allow: /validar
 
 # Sitemap location
-Sitemap: https://nicovega.dev/rutificador/sitemap.xml 
+Sitemap: https://www.rutschile.com/sitemap.xml 

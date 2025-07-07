@@ -17,10 +17,10 @@ export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    name: "Generador de RUT Chileno",
+    name: "RUT Chile - Generador Oficial",
     description:
-      "Herramienta gratuita para generar RUTs chilenos válidos al azar",
-    url: "https://nicovega.dev/rutificador",
+      "RUT Chile: Herramienta oficial y gratuita para generar RUTs chilenos válidos al azar con dígito verificador correcto",
+    url: "https://www.rutschile.com",
     applicationCategory: "UtilityApplication",
     operatingSystem: "Web Browser",
     offers: {
@@ -72,11 +72,11 @@ export default function Home() {
       <article className="text-center bg-[#F8F8F8] p-8 rounded-2xl">
         <header className="max-w-2xl mx-auto">
           <h1 className="text-4xl font-bold mb-4 text-[#212121]">
-            Generador de RUT Chileno - Crear RUTs Válidos al Azar
+            RUT Chile - Generador Oficial de RUT Chileno Válido
           </h1>
           <p className="mb-8 text-[#333333]">
-            Genera RUTs chilenos válidos al azar gratis. Herramienta para crear
-            RUTs de Chile con dígito verificador correcto.
+            Bienvenido a RUT Chile. Genera RUTs chilenos válidos al azar de forma gratuita.
+            Herramienta oficial para crear RUTs con dígito verificador correcto.
           </p>
         </header>
 

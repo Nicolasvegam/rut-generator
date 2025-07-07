@@ -11,14 +11,16 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nicovega.dev/rutificador"),
+  metadataBase: new URL("https://www.rutschile.com"),
   title: {
-    default: "Generador de RUT Chileno - Crear RUTs Válidos al Azar",
-    template: "%s | Generador RUT Chile",
+    default: "RUT Chile - Generador de RUT Chileno Válido | Crear RUTs al Azar",
+    template: "%s | RUT Chile",
   },
   description:
-    "Genera RUTs chilenos válidos al azar gratis. Herramienta para crear RUTs de Chile con dígito verificador correcto. Validador de RUT incluido.",
+    "RUT Chile: Generador oficial de RUTs chilenos válidos. Crea RUTs al azar con dígito verificador correcto. Herramienta gratuita para generar y validar RUT de Chile.",
   keywords: [
+    "rut chile",
+    "rutschile",
     "generador de rut chilenos",
     "generador de rut",
     "generador de rut chileno",
@@ -37,6 +39,7 @@ export const metadata: Metadata = {
     "validador rut chile",
     "verificar rut chileno",
     "calcular digito verificador rut",
+    "rutschile.com",
   ],
   authors: [{ name: "Di Monk", url: "https://software.nicovega.dev" }],
   creator: "Di Monk",
@@ -47,11 +50,11 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: "Generador de RUT Chileno - Crear RUTs Válidos al Azar",
+    title: "RUT Chile - Generador de RUT Chileno Válido | Crear RUTs al Azar",
     description:
-      "Genera RUTs chilenos válidos al azar gratis. Herramienta para crear RUTs de Chile con dígito verificador correcto. Validador de RUT incluido.",
-    url: "https://nicovega.dev/rutificador/",
-    siteName: "Generador RUT Chile",
+      "RUT Chile: Generador oficial de RUTs chilenos válidos. Crea RUTs al azar con dígito verificador correcto. Herramienta gratuita para generar y validar RUT.",
+    url: "https://www.rutschile.com/",
+    siteName: "RUT Chile",
     locale: "es_CL",
     type: "website",
     images: [
@@ -65,9 +68,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Generador de RUT Chileno - Crear RUTs Válidos al Azar",
+    title: "RUT Chile - Generador de RUT Chileno Válido",
     description:
-      "Genera RUTs chilenos válidos al azar gratis. Herramienta para crear RUTs de Chile con dígito verificador correcto.",
+      "RUT Chile: Generador oficial de RUTs chilenos válidos. Crea RUTs al azar con dígito verificador correcto.",
     images: ["/icon.svg"],
   },
   robots: {
@@ -91,7 +94,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://nicovega.dev/rutificador/",
+    canonical: "https://www.rutschile.com/",
   },
   verification: {
     google: "google-site-verification-code", // Add your Google verification code here

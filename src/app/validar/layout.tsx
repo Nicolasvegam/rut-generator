@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     title: "Validador de RUT Chileno",
     description:
       "Valida RUTs chilenos en línea. Verifica si un RUT es válido de forma rápida y segura.",
+    url: "https://www.rutschile.com/validar",
   },
 };
 
