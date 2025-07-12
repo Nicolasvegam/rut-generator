@@ -12,6 +12,7 @@ export function Navbar() {
     { name: "Validador RUT", href: "/validar" },
     { name: "RUT al Azar", href: "/rut-al-azar" },
     { name: "Creador RUT", href: "/creador-rut" },
+    { name: "Blog", href: "/blog" },
   ];
 
   return (
