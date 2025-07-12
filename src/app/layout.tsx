@@ -3,6 +3,7 @@ import { Karla } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 const karla = Karla({ subsets: ["latin"] });
 
@@ -11,15 +12,35 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nicovega.dev/rutificador"),
+  metadataBase: new URL("https://www.rutschile.com"),
   title: {
-    default: "Generador de RUT Chileno - Crear RUTs Válidos al Azar",
-    template: "%s | Generador RUT Chile",
+    default: "RUT Chile - Generador de RUT Chileno Válido | Crear RUTs al Azar",
+    template: "%s | RUT Chile",
   },
   description:
-    "Genera RUTs chilenos válidos al azar gratis. Herramienta para crear RUTs de Chile con dígito verificador correcto. Validador de RUT incluido.",
+    "🔥 Genera RUTs chilenos válidos GRATIS al instante ✓ Más de 8,900 usuarios confían en nuestro generador ⚡ Crea RUTs con dígito verificador correcto en segundos.",
   keywords: [
-    "generador rut chileno",
+    "rut chile",
+    "rutschile",
+    "generador de rut chilenos",
+    "generador de rut",
+    "generador de rut chileno",
+    "generador rut chile",
+    "generador de ruts chilenos",
+    "generador de rut chilenos validos",
+    "rut generador",
+    "genera rut chileno",
+    "generador de ruts",
+    "rut al azar",
+    "rut chileno generador",
+    "generador rut",
+    "generador ruts",
+    "creador de rut",
+    "generador de rut validos",
+    "validador rut chile",
+    "verificar rut chileno",
+    "calcular digito verificador rut",
+    "rutschile.com",
     "crear rut chile válido",
     "rut aleatorio chile",
     "generador rut online gratis",
@@ -32,7 +53,7 @@ export const metadata: Metadata = {
     "sistema rut chile",
     "generador identificacion chile"
   ],
-  authors: [{ name: "Di Monk", url: "https://software.nicovega.dev" }],
+  authors: [{ name: "Di Monk", url: "https://www.dimonk.com" }],
   creator: "Di Monk",
   publisher: "Di Monk",
   formatDetection: {
@@ -41,11 +62,11 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: "Generador de RUT Chileno - Crear RUTs Válidos al Azar",
+    title: "RUT Chile - Generador de RUT Chileno Válido | Crear RUTs al Azar",
     description:
-      "Genera RUTs chilenos válidos al azar gratis. Herramienta para crear RUTs de Chile con dígito verificador correcto. Validador de RUT incluido.",
-    url: "https://nicovega.dev/rutificador/",
-    siteName: "Generador RUT Chile",
+      "RUT Chile: Generador oficial de RUTs chilenos válidos. Crea RUTs al azar con dígito verificador correcto. Herramienta gratuita para generar y validar RUT.",
+    url: "https://www.rutschile.com/",
+    siteName: "RUT Chile",
     locale: "es_CL",
     type: "website",
     images: [
@@ -59,9 +80,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Generador de RUT Chileno - Crear RUTs Válidos al Azar",
+    title: "RUT Chile - Generador de RUT Chileno Válido",
     description:
-      "Genera RUTs chilenos válidos al azar gratis. Herramienta para crear RUTs de Chile con dígito verificador correcto.",
+      "RUT Chile: Generador oficial de RUTs chilenos válidos. Crea RUTs al azar con dígito verificador correcto.",
     images: ["/og-home.png"],
   },
   robots: {
@@ -84,11 +105,23 @@ export const metadata: Metadata = {
       url: "/icon.svg",
     },
   },
+  manifest: "/manifest.json",
   alternates: {
-    canonical: "https://nicovega.dev/rutificador/",
+    canonical: "https://www.rutschile.com/",
+    languages: {
+      'es-CL': 'https://www.rutschile.com/',
+      'x-default': 'https://www.rutschile.com/',
+    },
   },
   verification: {
     google: "google-site-verification-code", // Add your Google verification code here
+  },
+  other: {
+    'geo.region': 'CL',
+    'geo.placename': 'Chile',
+    'geo.position': '-33.4489;-70.6693',
+    'ICBM': '-33.4489, -70.6693',
+    'content-language': 'es-CL',
   },
 };
 
@@ -102,6 +135,7 @@ export default function RootLayout({
       <body className={`${karla.className} bg-white`}>
         <Navbar />
         {children}
+        <Footer />
         <Analytics />
       </body>
     </html>

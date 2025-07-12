@@ -21,7 +21,7 @@ export default function CreadorRut() {
     name: "Creador de RUT - Genera RUTs Chilenos Válidos",
     description:
       "Creador de RUT chilenos válidos. Herramienta para crear RUTs con dígito verificador correcto. Generador gratuito de RUTs.",
-    url: "https://nicovega.dev/rutificador/creador-rut",
+    url: "https://www.rutschile.com/creador-rut",
     applicationCategory: "UtilityApplication",
     operatingSystem: "Web Browser",
     offers: {
@@ -65,7 +65,12 @@ export default function CreadorRut() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Breadcrumbs />
+      <Breadcrumbs 
+        items={[
+          { name: "Inicio", url: "/" },
+          { name: "Creador de RUT" }
+        ]} 
+      />
       <article className="text-center bg-[#F8F8F8] p-8 rounded-2xl">
         <header className="max-w-2xl mx-auto">
           <h1 className="text-4xl font-bold mb-4 text-[#212121]">

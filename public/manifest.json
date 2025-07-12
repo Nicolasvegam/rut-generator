@@ -1,0 +1,80 @@
+{
+    "name": "Generador de RUT Chileno - RUT Chile",
+    "short_name": "RUT Chile",
+    "description": "Genera RUTs chilenos válidos al instante. Herramienta gratuita para crear RUTs con dígito verificador correcto.",
+    "start_url": "/?source=pwa",
+    "scope": "/",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "theme_color": "#0033A0",
+    "background_color": "#FFFFFF",
+    "lang": "es-CL",
+    "dir": "ltr",
+    "categories": ["productivity", "utilities", "business"],
+    "icons": [
+       {
+          "src": "/icons/favicon-16x16.png",
+          "sizes": "16x16",
+          "type": "image/png",
+          "purpose": "any"
+       },
+       {
+          "src": "/icons/favicon-32x32.png",
+          "sizes": "32x32",
+          "type": "image/png",
+          "purpose": "any"
+       },
+       {
+          "src": "/icons/android-chrome-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png",
+          "purpose": "any maskable"
+       },
+       {
+          "src": "/icons/android-chrome-512x512.png",
+          "sizes": "512x512",
+          "type": "image/png",
+          "purpose": "any maskable"
+       },
+       {
+          "src": "/icons/apple-touch-icon.png",
+          "sizes": "180x180",
+          "type": "image/png",
+          "purpose": "any"
+       }
+    ],
+    "screenshots": [
+       {
+          "src": "/screenshots/desktop-home.png",
+          "sizes": "1920x1080",
+          "type": "image/png",
+          "form_factor": "wide",
+          "label": "Generador de RUT en escritorio"
+       },
+       {
+          "src": "/screenshots/mobile-home.png",
+          "sizes": "390x844",
+          "type": "image/png",
+          "form_factor": "narrow",
+          "label": "Generador de RUT en móvil"
+       }
+    ],
+    "shortcuts": [
+       {
+          "name": "Generar RUT",
+          "short_name": "Generar",
+          "description": "Genera RUTs chilenos válidos",
+          "url": "/",
+          "icons": [{ "src": "/icon.svg", "sizes": "96x96" }]
+       },
+       {
+          "name": "Validar RUT",
+          "short_name": "Validar",
+          "description": "Valida un RUT chileno",
+          "url": "/validar",
+          "icons": [{ "src": "/icon.svg", "sizes": "96x96" }]
+       }
+    ],
+    "prefer_related_applications": false,
+    "related_applications": []
+ }

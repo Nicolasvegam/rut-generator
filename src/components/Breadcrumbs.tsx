@@ -1,3 +1,47 @@
+<<<<<<< HEAD
+import Link from "next/link"
+import Script from "next/script"
+
+interface BreadcrumbItem {
+  name: string
+  url?: string
+}
+
+interface BreadcrumbsProps {
+  items: BreadcrumbItem[]
+}
+
+export function Breadcrumbs({ items }: BreadcrumbsProps) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": items.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      ...(item.url && {
+        "item": `https://www.rutschile.com${item.url}`
+      })
+    }))
+  }
+
+  return (
+    <>
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData)
+        }}
+      />
+      <nav aria-label="Breadcrumb" className="mb-4">
+        <ol className="flex items-center space-x-2 text-sm text-gray-600">
+          {items.map((item, index) => (
+            <li key={index} className="flex items-center">
+              {index > 0 && (
+                <svg
+                  className="w-4 h-4 mx-2"
+=======
 "use client";
 
 import Link from "next/link";
@@ -58,6 +102,7 @@ export function Breadcrumbs() {
               {index > 0 && (
                 <svg
                   className="w-4 h-4 mx-2 text-gray-400"
+>>>>>>> f373c334956a6b096f7d95a73a0852b169d2a35b
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -68,6 +113,11 @@ export function Breadcrumbs() {
                   />
                 </svg>
               )}
+<<<<<<< HEAD
+              {item.url && index < items.length - 1 ? (
+                <Link
+                  href={item.url}
+=======
               {index === breadcrumbItems.length - 1 ? (
                 <span
                   className="font-medium text-[#0033A0]"
@@ -78,15 +128,27 @@ export function Breadcrumbs() {
               ) : (
                 <Link
                   href={item.href}
+>>>>>>> f373c334956a6b096f7d95a73a0852b169d2a35b
                   className="hover:text-[#0033A0] transition-colors"
                 >
                   {item.name}
                 </Link>
+<<<<<<< HEAD
+              ) : (
+                <span className={index === items.length - 1 ? "text-gray-900 font-medium" : ""}>
+                  {item.name}
+                </span>
+=======
+>>>>>>> f373c334956a6b096f7d95a73a0852b169d2a35b
               )}
             </li>
           ))}
         </ol>
       </nav>
     </>
+<<<<<<< HEAD
+  )
+=======
   );
+>>>>>>> f373c334956a6b096f7d95a73a0852b169d2a35b
 }

@@ -52,7 +52,12 @@ export default function ValidarRut() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Breadcrumbs />
+      <Breadcrumbs 
+        items={[
+          { name: "Inicio", url: "/" },
+          { name: "Validador de RUT" }
+        ]} 
+      />
       <article className="text-center bg-[#F8F8F8] p-8 rounded-2xl">
         <header className="max-w-2xl mx-auto">
           <h1 className="text-4xl font-bold mb-4 text-[#212121]">

@@ -21,7 +21,7 @@ export default function RutAlAzar() {
     name: "RUT al Azar - Generador de RUTs Chilenos Aleatorios",
     description:
       "Genera RUTs chilenos completamente al azar con dígito verificador válido. Herramienta gratuita para crear RUTs aleatorios.",
-    url: "https://nicovega.dev/rutificador/rut-al-azar",
+    url: "https://www.rutschile.com/rut-al-azar",
     applicationCategory: "UtilityApplication",
     operatingSystem: "Web Browser",
     offers: {
@@ -65,7 +65,12 @@ export default function RutAlAzar() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Breadcrumbs />
+      <Breadcrumbs 
+        items={[
+          { name: "Inicio", url: "/" },
+          { name: "RUT al Azar" }
+        ]} 
+      />
       <article className="text-center bg-[#F8F8F8] p-8 rounded-2xl">
         <header className="max-w-2xl mx-auto">
           <h1 className="text-4xl font-bold mb-4 text-[#212121]">
