@@ -41,6 +41,17 @@ export const metadata: Metadata = {
     "verificar rut chileno",
     "calcular digito verificador rut",
     "rutschile.com",
+    "crear rut chile válido",
+    "rut aleatorio chile",
+    "generador rut online gratis",
+    "crear cedula chilena",
+    "rut chile generator",
+    "numero rut valido chile",
+    "herramienta rut chile",
+    "generar rut gratis",
+    "rut chileno online",
+    "sistema rut chile",
+    "generador identificacion chile"
   ],
   authors: [{ name: "Di Monk", url: "https://www.dimonk.com" }],
   creator: "Di Monk",
@@ -60,10 +71,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/icon.svg",
-        width: 100,
-        height: 100,
-        alt: "Generador RUT Chile Logo",
+        url: "/og-home.png",
+        width: 1200,
+        height: 630,
+        alt: "Generador de RUT Chileno - Crear RUTs Válidos al Azar",
       },
     ],
   },
@@ -72,7 +83,7 @@ export const metadata: Metadata = {
     title: "RUT Chile - Generador de RUT Chileno Válido",
     description:
       "RUT Chile: Generador oficial de RUTs chilenos válidos. Crea RUTs al azar con dígito verificador correcto.",
-    images: ["/icon.svg"],
+    images: ["/og-home.png"],
   },
   robots: {
     index: true,

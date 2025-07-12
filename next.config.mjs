@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+<<<<<<< HEAD
   // Optimizaciones de rendimiento
   compress: true, // Habilitar compresión gzip
   poweredByHeader: false, // Eliminar header X-Powered-By por seguridad
@@ -13,6 +14,20 @@ const nextConfig = {
   },
 
   // Headers de seguridad y performance
+=======
+  // Configuración básica optimizada
+  compress: true,
+  poweredByHeader: false,
+  
+  // Optimización de imágenes
+  images: {
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200],
+    domains: ['nicovega.dev'],
+  },
+  
+  // Headers SEO básicos
+>>>>>>> f373c334956a6b096f7d95a73a0852b169d2a35b
   async headers() {
     return [
       {
@@ -23,6 +38,7 @@ const nextConfig = {
             value: 'on'
           },
           {
+<<<<<<< HEAD
             key: 'X-Content-Type-Options',
             value: 'nosniff'
           },
@@ -80,6 +96,15 @@ const nextConfig = {
     }
     return config
   },
+=======
+            key: 'X-Frame-Options',
+            value: 'DENY'
+          },
+        ],
+      },
+    ]
+  },
+>>>>>>> f373c334956a6b096f7d95a73a0852b169d2a35b
 };
 
 export default nextConfig;

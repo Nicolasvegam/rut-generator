@@ -10,19 +10,31 @@ export const metadata: Metadata = {
     "rut chileno aleatorio",
     "generar rut al azar",
     "rut aleatorio chile",
-    "crear rut aleatorio",
-    "generador de rut al azar",
+    "rut random chileno",
+    "generador random rut",
+    "numero rut aleatorio",
+    "rut chile random"
   ],
   openGraph: {
     title: "RUT al Azar - Generador de RUTs Chilenos Aleatorios",
     description:
       "Genera RUTs chilenos completamente al azar con dígito verificador válido. Herramienta gratuita para crear RUTs aleatorios.",
     url: "https://www.rutschile.com/rut-al-azar",
+    images: [
+      {
+        url: "/og-azar.png",
+        width: 1200,
+        height: 630,
+        alt: "RUT al Azar - Generador Aleatorio",
+      },
+    ],
   },
   twitter: {
+    card: "summary_large_image",
     title: "RUT al Azar - Generador de RUTs Chilenos Aleatorios",
     description:
       "Genera RUTs chilenos completamente al azar con dígito verificador válido.",
+    images: ["/og-azar.png"],
   },
 };
 

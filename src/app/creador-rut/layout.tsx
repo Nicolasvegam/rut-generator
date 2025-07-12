@@ -7,22 +7,34 @@ export const metadata: Metadata = {
   keywords: [
     "creador de rut",
     "crear rut chileno",
-    "generador creador rut",
     "creador rut chile",
     "herramienta crear rut",
-    "crear rut valido",
-    "generador de rut creador",
+    "crear rut válido",
+    "constructor rut chile",
+    "fabricar rut chileno",
+    "diseñar rut chile",
+    "hacer rut válido"
   ],
   openGraph: {
     title: "Creador de RUT - Genera RUTs Chilenos Válidos",
     description:
       "Creador de RUT chilenos válidos. Herramienta para crear RUTs con dígito verificador correcto. Generador gratuito de RUTs.",
     url: "https://www.rutschile.com/creador-rut",
+    images: [
+      {
+        url: "/og-creador.png",
+        width: 1200,
+        height: 630,
+        alt: "Creador de RUT Chileno",
+      },
+    ],
   },
   twitter: {
+    card: "summary_large_image",
     title: "Creador de RUT - Genera RUTs Chilenos Válidos",
     description:
       "Creador de RUT chilenos válidos. Herramienta para crear RUTs con dígito verificador correcto.",
+    images: ["/og-creador.png"],
   },
 };
 
