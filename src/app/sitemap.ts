@@ -1,7 +1,6 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-<<<<<<< HEAD
   const baseUrl = 'https://www.rutschile.com'
   const currentDate = new Date()
 
@@ -17,38 +16,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/validar`,
       lastModified: currentDate,
       changeFrequency: 'weekly' as const,
-=======
-  const baseUrl = 'https://nicovega.dev/rutificador'
-  const lastModified = new Date()
-
-  return [
-    {
-      url: baseUrl,
-      lastModified,
-      changeFrequency: 'daily',
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/validar`,
-      lastModified,
-      changeFrequency: 'weekly',
->>>>>>> f373c334956a6b096f7d95a73a0852b169d2a35b
       priority: 0.9,
     },
     {
       url: `${baseUrl}/rut-al-azar`,
-<<<<<<< HEAD
       lastModified: currentDate,
       changeFrequency: 'weekly' as const,
-=======
-      lastModified,
-      changeFrequency: 'weekly',
->>>>>>> f373c334956a6b096f7d95a73a0852b169d2a35b
       priority: 0.8,
     },
     {
       url: `${baseUrl}/creador-rut`,
-<<<<<<< HEAD
       lastModified: currentDate,
       changeFrequency: 'weekly' as const,
       priority: 0.8,
@@ -66,11 +43,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // }))
 
   return [...routes]
-=======
-      lastModified,
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-  ]
->>>>>>> f373c334956a6b096f7d95a73a0852b169d2a35b
 }
