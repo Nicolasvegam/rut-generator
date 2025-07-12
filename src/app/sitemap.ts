@@ -30,17 +30,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: currentDate,
+      changeFrequency: 'daily' as const,
+      priority: 0.7,
+    },
   ]
 
-  // Agregar futuras páginas dinámicamente
-  // Por ejemplo, si tienes un blog:
-  // const posts = await getPosts()
-  // const blogRoutes = posts.map((post) => ({
-  //   url: `${baseUrl}/blog/${post.slug}`,
-  //   lastModified: post.updatedAt,
-  //   changeFrequency: 'monthly' as const,
-  //   priority: 0.6,
-  // }))
+  // Posts del blog estáticos
+  const blogRoutes = [
+    {
+      url: `${baseUrl}/blog/algoritmo-modulo-11-validar-rut`,
+      lastModified: new Date('2025-01-12'),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/blog/como-obtener-rut-extranjero-chile-2024`,
+      lastModified: new Date('2025-01-12'),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/blog/diferencias-rut-run-chile`,
+      lastModified: new Date('2025-01-12'),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    },
+  ]
 
-  return [...routes]
+  return [...routes, ...blogRoutes]
 }
