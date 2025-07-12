@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { FAQs } from "@/components/FAQs";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ShareButtons } from "@/components/ShareButtons";
 
 export default function Home() {
   const [ruts, setRuts] = useState<Rut[]>([]);
@@ -38,7 +39,7 @@ export default function Home() {
     author: {
       "@type": "Person",
       name: "Di Monk",
-      url: "https://software.nicovega.dev",
+      url: "https://www.dimonk.com",
     },
   };
 
@@ -75,9 +76,13 @@ export default function Home() {
             RUT Chile - Generador Oficial de RUT Chileno Válido
           </h1>
           <p className="mb-8 text-[#333333]">
-            Bienvenido a RUT Chile. Genera RUTs chilenos válidos al azar de forma gratuita.
-            Herramienta oficial para crear RUTs con dígito verificador correcto.
+            Bienvenido a RUT Chile. Genera RUTs chilenos válidos al azar de
+            forma gratuita. Herramienta oficial para crear RUTs con dígito
+            verificador correcto.
           </p>
+          <div className="flex justify-center mt-4">
+            <ShareButtons />
+          </div>
         </header>
 
         <section className="flex flex-col items-center">
@@ -159,7 +164,7 @@ export default function Home() {
       <footer className="text-sm text-[#333333]/60 mt-12 text-center">
         Hecho con ❤️ por{" "}
         <Link
-          href="https://software.nicovega.dev"
+          href="https://www.dimonk.com"
           className="text-[#0033A0] hover:text-[#1a47b8]"
           target="_blank"
           rel="noopener noreferrer"

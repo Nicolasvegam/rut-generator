@@ -1,7 +1,61 @@
+# Generador de RUT Chileno - www.rutschile.com
+# Última actualización: 2025-01-12
+
 # Allow all crawlers
 User-agent: *
 Allow: /
-Allow: /validar
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+Crawl-delay: 0
+
+# Googlebot specific
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Crawl-delay: 0
+
+# Allow AI crawlers for better content understanding
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
 
 # Sitemap location
-Sitemap: https://www.rutschile.com/sitemap.xml 
+Sitemap: https://www.rutschile.com/sitemap.xml
+
+# Host directive (some crawlers support this)
+Host: https://www.rutschile.com 

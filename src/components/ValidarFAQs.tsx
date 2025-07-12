@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { FAQSchema } from "./FAQSchema";
 
 export function ValidarFAQs() {
   const faqs = [
@@ -91,7 +92,9 @@ export function ValidarFAQs() {
   ];
 
   return (
-    <section className="mx-auto">
+    <>
+      <FAQSchema faqs={faqs} />
+      <section className="mx-auto">
       <h2 className="text-2xl font-bold mb-8 text-[#212121]">
         Preguntas Frecuentes
       </h2>
@@ -116,5 +119,6 @@ export function ValidarFAQs() {
         ))}
       </Accordion>
     </section>
+    </>
   );
 }

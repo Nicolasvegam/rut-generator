@@ -3,6 +3,7 @@ import { Karla } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 const karla = Karla({ subsets: ["latin"] });
 
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | RUT Chile",
   },
   description:
-    "RUT Chile: Generador oficial de RUTs chilenos válidos. Crea RUTs al azar con dígito verificador correcto. Herramienta gratuita para generar y validar RUT de Chile.",
+    "🔥 Genera RUTs chilenos válidos GRATIS al instante ✓ Más de 8,900 usuarios confían en nuestro generador ⚡ Crea RUTs con dígito verificador correcto en segundos.",
   keywords: [
     "rut chile",
     "rutschile",
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     "calcular digito verificador rut",
     "rutschile.com",
   ],
-  authors: [{ name: "Di Monk", url: "https://software.nicovega.dev" }],
+  authors: [{ name: "Di Monk", url: "https://www.dimonk.com" }],
   creator: "Di Monk",
   publisher: "Di Monk",
   formatDetection: {
@@ -93,11 +94,23 @@ export const metadata: Metadata = {
       url: "/icon.svg",
     },
   },
+  manifest: "/manifest.json",
   alternates: {
     canonical: "https://www.rutschile.com/",
+    languages: {
+      'es-CL': 'https://www.rutschile.com/',
+      'x-default': 'https://www.rutschile.com/',
+    },
   },
   verification: {
     google: "google-site-verification-code", // Add your Google verification code here
+  },
+  other: {
+    'geo.region': 'CL',
+    'geo.placename': 'Chile',
+    'geo.position': '-33.4489;-70.6693',
+    'ICBM': '-33.4489, -70.6693',
+    'content-language': 'es-CL',
   },
 };
 
@@ -111,6 +124,7 @@ export default function RootLayout({
       <body className={`${karla.className} bg-white`}>
         <Navbar />
         {children}
+        <Footer />
         <Analytics />
       </body>
     </html>

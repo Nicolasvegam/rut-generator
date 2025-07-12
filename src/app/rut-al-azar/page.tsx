@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { FAQs } from "@/components/FAQs";
 import { RelatedTools } from "@/components/RelatedTools";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export default function RutAlAzar() {
   const [ruts, setRuts] = useState<Rut[]>([]);
@@ -63,6 +64,12 @@ export default function RutAlAzar() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Breadcrumbs 
+        items={[
+          { name: "Inicio", url: "/" },
+          { name: "RUT al Azar" }
+        ]} 
       />
       <article className="text-center bg-[#F8F8F8] p-8 rounded-2xl">
         <header className="max-w-2xl mx-auto">
