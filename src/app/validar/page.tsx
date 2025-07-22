@@ -6,6 +6,7 @@ import { isValidChileanRut } from "@/lib/utils/rut-validator";
 import { ValidarFAQs } from "@/components/ValidarFAQs";
 import { RelatedTools } from "@/components/RelatedTools";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ShareButtons } from "@/components/ShareButtons";
 import Link from "next/link";
 
 export default function ValidarRut() {
@@ -132,6 +133,10 @@ export default function ValidarRut() {
             </div>
           )}
         </section>
+        
+        <div className="flex justify-center mt-8">
+          <ShareButtons />
+        </div>
 
         {/* Full width FAQs section */}
         <div className="mt-16 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-16">

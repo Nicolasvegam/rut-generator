@@ -6,6 +6,7 @@ import Link from "next/link";
 import { FAQs } from "@/components/FAQs";
 import { RelatedTools } from "@/components/RelatedTools";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ShareButtons } from "@/components/ShareButtons";
 
 export default function CreadorRut() {
   const [ruts, setRuts] = useState<Rut[]>([]);
@@ -151,6 +152,10 @@ export default function CreadorRut() {
             })}
           </div>
         </section>
+        
+        <div className="flex justify-center mt-8">
+          <ShareButtons />
+        </div>
 
         <section className="mt-12 text-left">
           <h2 className="text-2xl font-bold mb-6 text-[#212121]">

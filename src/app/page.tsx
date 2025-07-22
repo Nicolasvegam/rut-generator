@@ -80,9 +80,6 @@ export default function Home() {
             forma gratuita. Herramienta oficial para crear RUTs con dígito
             verificador correcto.
           </p>
-          <div className="flex justify-center mt-4">
-            <ShareButtons />
-          </div>
         </header>
 
         <section className="flex flex-col items-center">
@@ -125,7 +122,7 @@ export default function Home() {
           </div>
 
           <div
-            className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-8 w-full"
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-8 w-full"
             role="list"
           >
             {ruts.map((rut, index) => {
@@ -154,6 +151,11 @@ export default function Home() {
             })}
           </div>
         </section>
+
+        <div className="flex justify-center mt-8">
+          <ShareButtons />
+        </div>
+
         <div className="mt-2 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-8">
           <FAQs />
         </div>
