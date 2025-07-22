@@ -10,8 +10,7 @@ export function Navbar() {
   const menuItems = [
     { name: "Generador RUT", href: "/" },
     { name: "Validador RUT", href: "/validar" },
-    { name: "RUT al Azar", href: "/rut-al-azar" },
-    { name: "Creador RUT", href: "/creador-rut" },
+    { name: "Generador Masivo", href: "/generador-masivo" },
     { name: "Blog", href: "/blog" },
   ];
 
