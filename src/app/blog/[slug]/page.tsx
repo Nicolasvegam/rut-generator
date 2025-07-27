@@ -1,10 +1,11 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, Calendar, Clock, Tag } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, Tag, User } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { blogPosts } from "@/lib/blog-data";
+import { blogPosts, authors } from "@/lib/blog-data";
 import { blogContent } from "@/lib/blog-content";
+import { MarkdownRenderer } from "@/components/MarkdownRenderer";
 
 interface BlogPostPageProps {
   params: {
@@ -48,32 +49,6 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   };
 }
 
-// Simple markdown to HTML converter for basic elements
-function markdownToHtml(markdown: string): string {
-  let html = markdown;
-  
-  // Headers
-  html = html.replace(/^### (.*$)/gim, '<h3 class="text-xl font-semibold text-gray-900 mt-6 mb-3">$1</h3>');
-  html = html.replace(/^## (.*$)/gim, '<h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">$1</h2>');
-  html = html.replace(/^# (.*$)/gim, '<h1 class="text-3xl font-bold text-gray-900 mt-8 mb-6">$1</h1>');
-  
-  // Bold
-  html = html.replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-gray-900">$1</strong>');
-  
-  // Links
-  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-blue-600 hover:underline">$1</a>');
-  
-  // Lists
-  html = html.replace(/^[-*] (.*$)/gim, '<li class="text-gray-700 mb-2">$1</li>');
-  
-  // Paragraphs
-  html = html.replace(/^(?!<[h|l|<])([^\n]+)$/gim, '<p class="text-gray-700 leading-relaxed mb-4">$1</p>');
-  
-  // Wrap lists
-  html = html.replace(/(<li.*<\/li>)/gms, '<ul class="list-disc pl-6 my-4">$1</ul>');
-  
-  return html;
-}
 
 export default function BlogPostPage({ params }: BlogPostPageProps) {
   const post = blogPosts.find((p) => p.slug === params.slug);
@@ -88,16 +63,23 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     notFound();
   }
 
-  const htmlContent = markdownToHtml(content);
+  const author = authors.find((a) => a.id === post.authorId);
+
+  // Remove htmlContent line as we'll use MarkdownRenderer
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
+    "@type": "Article",
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
     dateModified: post.date,
-    author: {
+    author: author ? {
+      "@type": "Person",
+      name: author.name,
+      jobTitle: author.profession,
+      description: author.bio,
+    } : {
       "@type": "Organization",
       name: "RUT Chile",
       url: "https://www.rutschile.com",
@@ -115,6 +97,9 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
       "@type": "WebPage",
       "@id": `https://www.rutschile.com/blog/${post.slug}`,
     },
+    articleBody: content,
+    keywords: post.tags.join(", "),
+    articleSection: post.category,
   };
 
   return (
@@ -147,6 +132,17 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             </h1>
             
             <div className="flex flex-wrap items-center gap-4 text-gray-600 mb-6">
+              {author && (
+                <div className="flex items-center gap-1">
+                  <User className="w-4 h-4" />
+                  <Link 
+                    href={`/blog/autor/${author.id}`}
+                    className="hover:text-[#0033A0] hover:underline transition-colors"
+                  >
+                    Por {author.name}
+                  </Link>
+                </div>
+              )}
               <div className="flex items-center gap-1">
                 <Calendar className="w-4 h-4" />
                 <time dateTime={post.date}>
@@ -173,10 +169,32 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
           </header>
 
-          <div 
-            className="prose prose-lg max-w-none"
-            dangerouslySetInnerHTML={{ __html: htmlContent }}
-          />
+          <MarkdownRenderer content={content} />
+
+          {author && (
+            <div className="mt-12 p-6 bg-gray-50 rounded-lg">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Sobre el autor
+              </h3>
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-[#0033A0] rounded-full flex items-center justify-center text-white font-semibold">
+                  {author.name.split(' ').map(n => n[0]).join('')}
+                </div>
+                <div>
+                  <Link 
+                    href={`/blog/autor/${author.id}`}
+                    className="hover:underline"
+                  >
+                    <h4 className="font-semibold text-gray-900 hover:text-[#0033A0] transition-colors">
+                      {author.name}
+                    </h4>
+                  </Link>
+                  <p className="text-sm text-gray-600 mb-1">{author.profession}</p>
+                  <p className="text-gray-700">{author.bio}</p>
+                </div>
+              </div>
+            </div>
+          )}
 
           <footer className="mt-12 pt-8 border-t border-gray-200">
             <div className="bg-blue-50 rounded-lg p-6 text-center">
