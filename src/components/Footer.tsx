@@ -99,9 +99,23 @@ export function Footer() {
               Herramienta gratuita para generar y validar RUTs chilenos. 
               Más de 8,900 usuarios confían en nosotros.
             </p>
-            <p className="text-gray-500 text-xs mt-4">
-              Última actualización: {lastUpdated}
-            </p>
+            <ul className="space-y-2 mt-4">
+              <li>
+                <Link href="/quienes-somos" className="text-gray-600 hover:text-[#0033A0] transition-colors text-sm">
+                  Quiénes Somos
+                </Link>
+              </li>
+              <li>
+                <Link href="/terminos-condiciones" className="text-gray-600 hover:text-[#0033A0] transition-colors text-sm">
+                  Términos y Condiciones
+                </Link>
+              </li>
+              <li>
+                <Link href="/politica-privacidad" className="text-gray-600 hover:text-[#0033A0] transition-colors text-sm">
+                  Política de Privacidad
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
 

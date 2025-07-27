@@ -12,6 +12,8 @@ export function Navbar() {
     { name: "Validador RUT", href: "/validar" },
     { name: "Generador Masivo", href: "/generador-masivo" },
     { name: "Blog", href: "/blog" },
+    { name: "Quiénes Somos", href: "/quienes-somos" },
+    { name: "Metodología", href: "/metodologia" },
   ];
 
   return (
