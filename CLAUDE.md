@@ -35,13 +35,28 @@ src/app/                    # Next.js App Router pages
 ├── page.tsx               # Main generator (/)
 ├── creador-rut/           # Alternative generator (/creador-rut)
 ├── validar/               # RUT validator (/validar)
-└── rut-al-azar/          # Random generator (/rut-al-azar)
+├── rut-al-azar/          # Random generator (/rut-al-azar)
+├── generador-masivo/      # Mass RUT generator (/generador-masivo)
+├── calcular-digito/       # Verification digit calculator (/calcular-digito)
+├── blog/                  # Blog system
+│   ├── [slug]/           # Dynamic blog post pages
+│   └── autor/            # Author pages
+├── quienes-somos/        # About page
+├── metodologia/          # Methodology page
+├── politica-privacidad/  # Privacy policy
+└── terminos-condiciones/ # Terms and conditions
 
 src/components/
 ├── ui/                    # shadcn/ui components
 ├── FAQs.tsx              # Home page FAQs
 ├── ValidarFAQs.tsx       # Validator page FAQs
-└── Navbar.tsx            # Navigation component
+├── Navbar.tsx            # Navigation component
+├── ShareButtons.tsx      # Social sharing component
+└── MarkdownRenderer.tsx  # Blog markdown with syntax highlighting
+
+src/lib/
+├── blog-data.ts          # Blog metadata and author information
+└── blog-content.ts       # Blog post content storage
 ```
 
 ## Technology Stack
@@ -50,6 +65,7 @@ src/components/
 - **Tailwind CSS** + **shadcn/ui** for styling and components
 - **Radix UI** primitives for accessibility
 - **Vercel Analytics** for web analytics
+- **react-syntax-highlighter** for code block syntax highlighting
 
 ## Key Features
 
@@ -65,23 +81,37 @@ while (number) {
 return S ? S - 1 : "K";
 ```
 
+### Blog System Architecture
+- **Content Management**: Blog posts stored in `/src/lib/blog-content.ts` with metadata in `/src/lib/blog-data.ts`
+- **Author System**: Multiple authors with profiles linked to blog posts
+- **Markdown Rendering**: Custom `MarkdownRenderer` component with:
+  - Syntax highlighting for code blocks
+  - Copy-to-clipboard functionality
+  - Enhanced table styling
+  - Language labels and line numbers
+
 ### Page-Specific Functionality
 - **Home (/)**: Main generator interface with batch generation
 - **Creator (/creador-rut)**: Alternative messaging for RUT creation
 - **Validator (/validar)**: Real-time RUT validation with visual feedback
 - **Random (/rut-al-azar)**: Emphasizes randomness in generation
+- **Mass Generator (/generador-masivo)**: Bulk RUT generation with export
+- **Digit Calculator (/calcular-digito)**: Calculate verification digit for given RUT number
+- **Blog (/blog)**: Technical articles about RUT implementation in various languages
 
 ## SEO & Localization
 
 - Chilean Spanish localization (`es_CL`)
 - Comprehensive meta tags and JSON-LD structured data
-- Sitemap and robots.txt configured
+- Dynamic sitemap generation in `/src/app/sitemap.ts`
 - Open Graph and Twitter Card metadata
+- Structured data for blog posts with author information
 
 ## Development Notes
 
 - Uses shadcn/ui component system (config in `components.json`)
-- Blue theme color: `#0033A0`
+- Blue theme color: `#0033A0` (Chilean flag blue)
 - Google Fonts (Karla) for typography
 - Responsive design with mobile-first approach
 - TypeScript strict mode enabled
+- Path aliases: `@/*` maps to `./src/*`

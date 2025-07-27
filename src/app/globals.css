@@ -107,3 +107,61 @@ body {
 .animate-fade-in {
   animation: fade-in 0.3s ease-out;
 }
+
+/* Enhanced code block styles */
+@layer components {
+  /* Inline code styling */
+  code:not(pre code) {
+    @apply px-2 py-1 bg-gray-100 text-red-600 rounded text-sm font-mono;
+  }
+  
+  /* Code block container enhancements */
+  pre {
+    @apply relative;
+  }
+  
+  /* Custom scrollbar for code blocks */
+  pre::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+  }
+  
+  pre::-webkit-scrollbar-track {
+    @apply bg-gray-800;
+  }
+  
+  pre::-webkit-scrollbar-thumb {
+    @apply bg-gray-600 rounded;
+  }
+  
+  pre::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
+  }
+  
+  /* Syntax highlighting enhancements */
+  .token.comment {
+    @apply italic opacity-70;
+  }
+  
+  .token.keyword {
+    @apply font-medium;
+  }
+  
+  .token.function {
+    @apply text-yellow-300;
+  }
+  
+  .token.string {
+    @apply text-green-300;
+  }
+  
+  /* Line numbers styling */
+  .linenumber {
+    @apply text-gray-500 select-none pr-4;
+  }
+  
+  /* Copy button transition */
+  .copy-button {
+    @apply transition-all duration-200;
+  }
+}
