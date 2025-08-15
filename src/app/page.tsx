@@ -15,7 +15,7 @@ export default function Home() {
     rut: "",
   });
 
-  const jsonLd = {
+  const webApplicationSchema = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     name: "RUT Chile - Generador Oficial",
@@ -43,6 +43,45 @@ export default function Home() {
     },
   };
 
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "RUT Chile",
+    url: "https://www.rutschile.com",
+    logo: "https://www.rutschile.com/icon.svg",
+    sameAs: [
+      "https://www.dimonk.com"
+    ]
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "RUT Chile",
+    url: "https://www.rutschile.com",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: "https://www.rutschile.com/validar?rut={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Inicio",
+        item: "https://www.rutschile.com"
+      }
+    ]
+  };
+
   const generateRuts = () => {
     const ruts = rutGenerator().generateRuts();
     setRuts(ruts);
@@ -68,7 +107,19 @@ export default function Home() {
     <main className="max-w-7xl mx-auto my-12 px-4 sm:px-6 lg:px-8">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webApplicationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <article className="text-center bg-[#F8F8F8] p-8 rounded-2xl">
         <header className="max-w-2xl mx-auto">

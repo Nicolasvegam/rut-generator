@@ -1,276 +1,255 @@
 import { Metadata } from "next";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Términos y Condiciones | RUT Chile - Generador de RUT Chileno",
-  description: "Lee los términos y condiciones de uso del generador y validador de RUT chileno en RUT Chile.",
-  keywords: "términos condiciones, RUT Chile, términos de uso, condiciones servicio, legal",
+  title: "Términos y Condiciones - RUTs Chile | Generador de RUT Chileno",
+  description: "Lee los términos y condiciones de uso de RUTs Chile. Conoce tus derechos y responsabilidades al usar nuestro servicio gratuito.",
+  keywords: "términos y condiciones, términos de uso, condiciones de servicio, RUTs Chile",
   openGraph: {
-    title: "Términos y Condiciones | RUT Chile",
-    description: "Lee los términos y condiciones de uso del generador y validador de RUT chileno.",
+    title: "Términos y Condiciones - RUTs Chile",
+    description: "Términos y condiciones de uso del servicio RUTs Chile",
     url: "https://www.rutschile.com/terminos-condiciones",
-    siteName: "RUT Chile",
+    siteName: "RUTs Chile",
     locale: "es_CL",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Términos y Condiciones | RUT Chile",
-    description: "Lee los términos y condiciones de uso del generador y validador de RUT chileno.",
+    title: "Términos y Condiciones - RUTs Chile",
+    description: "Términos y condiciones de uso del servicio RUTs Chile",
   },
   alternates: {
     canonical: "https://www.rutschile.com/terminos-condiciones",
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
 };
 
 export default function TerminosCondicionesPage() {
-  const breadcrumbItems = [
-    { name: "Inicio", url: "/" },
-    { name: "Términos y Condiciones", url: "/terminos-condiciones" },
-  ];
-
   return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar />
-      <main className="flex-grow container mx-auto px-4 py-8">
-        <Breadcrumbs items={breadcrumbItems} />
-        
-        <div className="max-w-4xl mx-auto space-y-8">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Términos y Condiciones de Uso
-            </h1>
-            <p className="text-xl text-gray-600">
-              Condiciones que rigen el uso de nuestro servicio
-            </p>
-            <p className="text-sm text-gray-500 mt-2">
-              Última actualización: Enero 2025
-            </p>
-          </div>
+    <div className="container mx-auto px-4 py-8 max-w-4xl">
+      <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">
+        Términos y Condiciones de Uso
+      </h1>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>1. Aceptación de los Términos</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-gray-700">
-                Al acceder y utilizar el sitio web www.rutschile.com (&quot;el Servicio&quot;), aceptas 
-                cumplir y estar sujeto a estos Términos y Condiciones de Uso. Si no estás de 
-                acuerdo con alguna parte de estos términos, no debes utilizar nuestro Servicio.
-              </p>
-            </CardContent>
-          </Card>
+      <div className="prose prose-lg max-w-none space-y-8">
+        <section className="bg-gray-50 p-6 rounded-lg">
+          <p className="text-gray-600 leading-relaxed">
+            <strong>Última actualización:</strong> 27 de julio de 2025
+          </p>
+          <p className="text-gray-600 leading-relaxed mt-2">
+            Bienvenido a RUTs Chile. Al acceder y utilizar nuestro sitio web 
+            www.rutschile.com, aceptas cumplir y estar sujeto a los siguientes 
+            términos y condiciones de uso.
+          </p>
+        </section>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>2. Descripción del Servicio</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-gray-700">
-                RUT Chile proporciona herramientas gratuitas en línea para:
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                <li>Generar números de RUT chilenos válidos de forma aleatoria</li>
-                <li>Validar la estructura y dígito verificador de RUT existentes</li>
-                <li>Calcular el dígito verificador para números de RUT</li>
-                <li>Generar múltiples RUT de forma masiva</li>
-              </ul>
-              <p className="text-gray-700 mt-4">
-                Todos los servicios se ejecutan directamente en el navegador del usuario, sin 
-                almacenamiento de datos en nuestros servidores.
-              </p>
-            </CardContent>
-          </Card>
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            1. Aceptación de los Términos
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            Al utilizar RUTs Chile, confirmas que has leído, entendido y aceptado 
+            estos Términos y Condiciones. Si no estás de acuerdo con alguna parte 
+            de estos términos, no debes usar nuestro servicio.
+          </p>
+        </section>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>3. Uso Permitido</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-gray-700">
-                El Servicio está diseñado y debe ser utilizado exclusivamente para:
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                <li>Pruebas de desarrollo de software y aplicaciones</li>
-                <li>Fines educativos y de aprendizaje</li>
-                <li>Validación de formularios en ambientes de desarrollo</li>
-                <li>Demostración de sistemas y aplicaciones</li>
-                <li>Cualquier otro uso legal y ético que requiera RUT de prueba</li>
-              </ul>
-            </CardContent>
-          </Card>
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            2. Descripción del Servicio
+          </h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            RUTs Chile proporciona las siguientes herramientas gratuitas:
+          </p>
+          <ul className="list-disc list-inside text-gray-600 space-y-2 ml-4">
+            <li>Generador de RUTs válidos según el algoritmo chileno</li>
+            <li>Validador de RUTs existentes</li>
+            <li>Formateador de RUTs con puntos y guión</li>
+            <li>Información educativa sobre el sistema de RUT</li>
+            <li>Descarga de RUTs generados en formato de texto</li>
+          </ul>
+          <p className="text-gray-600 leading-relaxed mt-4">
+            <strong>Importante:</strong> Los RUTs generados son aleatorios y válidos 
+            algorítmicamente, pero no corresponden necesariamente a personas o empresas reales.
+          </p>
+        </section>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>4. Uso Prohibido</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-gray-700 font-semibold">
-                Está estrictamente prohibido utilizar el Servicio para:
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                <li>Cualquier actividad ilegal, fraudulenta o no autorizada</li>
-                <li>Suplantar la identidad de personas reales</li>
-                <li>Registrarse en servicios reales con RUT generados</li>
-                <li>Realizar transacciones financieras o comerciales</li>
-                <li>Acceder a sistemas o servicios sin autorización</li>
-                <li>Cualquier actividad que viole las leyes chilenas o internacionales</li>
-                <li>Causar daño o perjuicio a terceros</li>
-              </ul>
-              <p className="text-red-600 font-semibold mt-4">
-                El incumplimiento de estas restricciones puede resultar en acciones legales.
-              </p>
-            </CardContent>
-          </Card>
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            3. Uso Permitido
+          </h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            El servicio de RUTs Chile está diseñado para usos legítimos, incluyendo:
+          </p>
+          <ul className="list-disc list-inside text-gray-600 space-y-2 ml-4">
+            <li>Pruebas de desarrollo de software</li>
+            <li>Validación de formularios web</li>
+            <li>Fines educativos y de aprendizaje</li>
+            <li>Demostración de sistemas</li>
+            <li>Generación de datos de prueba</li>
+          </ul>
+        </section>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>5. Descargo de Responsabilidad</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-gray-700">
-                Los RUT generados por nuestro Servicio:
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                <li>Son completamente aleatorios y ficticios</li>
-                <li>No corresponden a personas reales</li>
-                <li>No deben ser utilizados para ningún propósito oficial o legal</li>
-                <li>No tienen validez legal alguna</li>
-              </ul>
-              <p className="text-gray-700 mt-4">
-                El usuario es el único responsable del uso que haga de los RUT generados y de 
-                las consecuencias que se deriven de dicho uso.
-              </p>
-            </CardContent>
-          </Card>
+        <section className="bg-red-50 p-6 rounded-lg">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            4. Uso Prohibido
+          </h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Está estrictamente prohibido utilizar RUTs Chile para:
+          </p>
+          <ul className="list-disc list-inside text-gray-600 space-y-2 ml-4">
+            <li>Cualquier actividad ilegal o fraudulenta</li>
+            <li>Suplantación de identidad</li>
+            <li>Creación de documentos falsos</li>
+            <li>Evasión fiscal o tributaria</li>
+            <li>Acceso no autorizado a sistemas</li>
+            <li>Cualquier actividad que viole las leyes chilenas</li>
+            <li>Uso comercial sin autorización</li>
+            <li>Sobrecarga intencional de nuestros servidores</li>
+          </ul>
+        </section>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>6. Limitación de Responsabilidad</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-gray-700">
-                RUT Chile no será responsable por:
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                <li>Daños directos, indirectos, incidentales o consecuentes derivados del uso del Servicio</li>
-                <li>Pérdidas económicas o de datos</li>
-                <li>Interrupciones del servicio o errores técnicos</li>
-                <li>Uso indebido o ilegal del Servicio por parte de los usuarios</li>
-                <li>Cualquier acción tomada basándose en la información proporcionada</li>
-              </ul>
-            </CardContent>
-          </Card>
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            5. Propiedad Intelectual
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            Todo el contenido de RUTs Chile, incluyendo pero no limitado a texto, 
+            gráficos, logos, código fuente, y diseño, es propiedad de RUTs Chile 
+            o sus licenciantes y está protegido por las leyes de derechos de autor 
+            chilenas e internacionales.
+          </p>
+          <p className="text-gray-600 leading-relaxed mt-4">
+            Se permite el uso del servicio para los fines establecidos, pero no 
+            la reproducción, distribución o creación de trabajos derivados sin 
+            autorización expresa.
+          </p>
+        </section>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>7. Propiedad Intelectual</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-gray-700">
-                Todo el contenido del sitio web, incluyendo pero no limitado a texto, gráficos, 
-                logos, código fuente y software, es propiedad de RUT Chile o sus licenciantes y 
-                está protegido por las leyes de propiedad intelectual.
-              </p>
-              <p className="text-gray-700">
-                El algoritmo de validación de RUT utilizado es de dominio público y se basa en 
-                las especificaciones oficiales del sistema chileno.
-              </p>
-            </CardContent>
-          </Card>
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            6. Limitación de Responsabilidad
+          </h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            RUTs Chile se proporciona &quot;tal cual&quot; y &quot;según disponibilidad&quot;. No garantizamos:
+          </p>
+          <ul className="list-disc list-inside text-gray-600 space-y-2 ml-4">
+            <li>Que el servicio será ininterrumpido o libre de errores</li>
+            <li>La exactitud o confiabilidad de los resultados</li>
+            <li>Que el servicio cumplirá con requisitos específicos</li>
+          </ul>
+          <p className="text-gray-600 leading-relaxed mt-4">
+            <strong>RUTs Chile no será responsable por:</strong>
+          </p>
+          <ul className="list-disc list-inside text-gray-600 space-y-2 ml-4">
+            <li>Daños directos, indirectos, incidentales o consecuentes</li>
+            <li>Pérdida de datos o beneficios</li>
+            <li>Uso indebido de los RUTs generados</li>
+            <li>Consecuencias del uso ilegal del servicio</li>
+          </ul>
+        </section>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>8. Disponibilidad del Servicio</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-gray-700">
-                El Servicio se proporciona &quot;tal cual&quot; y &quot;según disponibilidad&quot;. No garantizamos:
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                <li>Disponibilidad ininterrumpida del Servicio</li>
-                <li>Ausencia de errores o fallos técnicos</li>
-                <li>Que el Servicio cumplirá con requisitos específicos del usuario</li>
-              </ul>
-              <p className="text-gray-700 mt-4">
-                Nos reservamos el derecho de modificar, suspender o descontinuar el Servicio en 
-                cualquier momento sin previo aviso.
-              </p>
-            </CardContent>
-          </Card>
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            7. Indemnización
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            Aceptas indemnizar y mantener indemne a RUTs Chile, sus propietarios, 
+            empleados y afiliados de cualquier reclamo, daño, pérdida o gasto 
+            (incluyendo honorarios legales) que surjan de tu uso del servicio 
+            o violación de estos términos.
+          </p>
+        </section>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>9. Indemnización</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-gray-700">
-                El usuario acepta indemnizar y eximir de responsabilidad a RUT Chile, sus 
-                afiliados, directores, empleados y agentes, de cualquier reclamo, demanda, 
-                pérdida o daño, incluyendo honorarios razonables de abogados, que surjan del 
-                uso indebido del Servicio o la violación de estos Términos.
-              </p>
-            </CardContent>
-          </Card>
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            8. Privacidad
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            Tu uso de RUTs Chile también está regido por nuestra{" "}
+            <a href="/politica-privacidad" className="text-blue-600 hover:underline">
+              Política de Privacidad
+            </a>
+            . Al usar el servicio, aceptas las prácticas descritas en dicha política.
+          </p>
+        </section>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>10. Modificaciones de los Términos</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-gray-700">
-                Nos reservamos el derecho de modificar estos Términos y Condiciones en cualquier 
-                momento. Las modificaciones entrarán en vigor inmediatamente después de su 
-                publicación en el sitio web.
-              </p>
-              <p className="text-gray-700">
-                El uso continuado del Servicio después de cualquier modificación constituye la 
-                aceptación de los nuevos términos.
-              </p>
-            </CardContent>
-          </Card>
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            9. Modificaciones al Servicio
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            Nos reservamos el derecho de modificar, suspender o discontinuar 
+            cualquier aspecto del servicio en cualquier momento sin previo aviso. 
+            No seremos responsables ante ti o terceros por cualquier modificación, 
+            suspensión o discontinuación del servicio.
+          </p>
+        </section>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>11. Ley Aplicable</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-gray-700">
-                Estos Términos y Condiciones se regirán e interpretarán de acuerdo con las leyes 
-                de la República de Chile, sin tener en cuenta sus disposiciones sobre conflictos 
-                de leyes.
-              </p>
-            </CardContent>
-          </Card>
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            10. Cambios en los Términos
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            Podemos actualizar estos Términos y Condiciones ocasionalmente. 
+            Los cambios entrarán en vigor inmediatamente después de su publicación. 
+            El uso continuado del servicio después de los cambios constituye 
+            aceptación de los nuevos términos.
+          </p>
+        </section>
 
-          <Card className="bg-blue-50 border-blue-200">
-            <CardHeader>
-              <CardTitle className="text-blue-900">12. Contacto</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-700">
-                Si tienes preguntas sobre estos Términos y Condiciones, puedes contactarnos 
-                visitando nuestra página principal en{" "}
-                <a href="/" className="text-blue-600 hover:underline font-semibold">
-                  www.rutschile.com
-                </a>
-              </p>
-              <p className="text-gray-700 mt-4">
-                Al utilizar nuestro Servicio, confirmas que has leído, entendido y aceptado 
-                estos Términos y Condiciones en su totalidad.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </main>
-      <Footer />
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            11. Terminación
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            Podemos terminar o suspender tu acceso al servicio inmediatamente, 
+            sin previo aviso, por cualquier motivo, incluyendo sin limitación 
+            si violas estos Términos y Condiciones.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            12. Ley Aplicable
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            Estos Términos y Condiciones se rigen por las leyes de la República 
+            de Chile. Cualquier disputa relacionada con estos términos estará 
+            sujeta a la jurisdicción exclusiva de los tribunales chilenos.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            13. Divisibilidad
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            Si alguna disposición de estos términos se considera inválida o 
+            inaplicable, las disposiciones restantes continuarán en pleno 
+            vigor y efecto.
+          </p>
+        </section>
+
+        <section className="bg-blue-50 p-6 rounded-lg">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            14. Contacto
+          </h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Si tienes preguntas sobre estos Términos y Condiciones, contáctanos:
+          </p>
+          <ul className="list-none text-gray-600 space-y-2">
+            <li>📧 Email: contacto@rutschile.com</li>
+            <li>🌐 Sitio web: www.rutschile.com</li>
+            <li>📍 País: Chile</li>
+          </ul>
+        </section>
+
+        <section>
+          <p className="text-center text-gray-500 text-sm mt-8">
+            Al usar RUTs Chile, reconoces haber leído y comprendido estos 
+            Términos y Condiciones y aceptas estar legalmente obligado por ellos.
+          </p>
+        </section>
+      </div>
     </div>
   );
 }

@@ -1,25 +1,21 @@
 import { Metadata } from "next";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Quiénes Somos | RUT Chile - Generador de RUT Chileno",
-  description: "Conoce más sobre RUT Chile, la herramienta líder para generar y validar RUT chilenos de forma rápida, segura y gratuita.",
-  keywords: "quienes somos, RUT Chile, generador RUT, validador RUT, equipo, misión",
+  title: "Quiénes Somos - RUTs Chile | Generador de RUT Chileno",
+  description: "Conoce al equipo detrás de RUTs Chile, el generador de RUT más confiable y utilizado en Chile. Nuestra misión es facilitar el acceso a herramientas útiles para todos los chilenos.",
+  keywords: "quiénes somos, acerca de, RUTs Chile, equipo, misión, visión",
   openGraph: {
-    title: "Quiénes Somos | RUT Chile",
-    description: "Conoce más sobre RUT Chile, la herramienta líder para generar y validar RUT chilenos.",
+    title: "Quiénes Somos - RUTs Chile",
+    description: "Conoce al equipo detrás de RUTs Chile y nuestra misión",
     url: "https://www.rutschile.com/quienes-somos",
-    siteName: "RUT Chile",
+    siteName: "RUTs Chile",
     locale: "es_CL",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Quiénes Somos | RUT Chile",
-    description: "Conoce más sobre RUT Chile, la herramienta líder para generar y validar RUT chilenos.",
+    title: "Quiénes Somos - RUTs Chile",
+    description: "Conoce al equipo detrás de RUTs Chile y nuestra misión",
   },
   alternates: {
     canonical: "https://www.rutschile.com/quienes-somos",
@@ -27,140 +23,106 @@ export const metadata: Metadata = {
 };
 
 export default function QuienesSomosPage() {
-  const breadcrumbItems = [
-    { name: "Inicio", url: "/" },
-    { name: "Quiénes Somos", url: "/quienes-somos" },
-  ];
-
   return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar />
-      <main className="flex-grow container mx-auto px-4 py-8">
-        <Breadcrumbs items={breadcrumbItems} />
-        
-        <div className="max-w-4xl mx-auto space-y-8">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Quiénes Somos
-            </h1>
-            <p className="text-xl text-gray-600">
-              La herramienta más confiable para generar y validar RUT chilenos
-            </p>
-          </div>
+    <div className="container mx-auto px-4 py-8 max-w-4xl">
+      <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">
+        Quiénes Somos
+      </h1>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>Nuestra Misión</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-gray-700">
-                En RUT Chile, nos dedicamos a proporcionar herramientas simples, rápidas y confiables 
-                para la generación y validación de RUT chilenos. Entendemos la importancia de contar 
-                con números de identificación válidos para pruebas, desarrollo y fines educativos.
-              </p>
-              <p className="text-gray-700">
-                Nuestro objetivo es ofrecer un servicio gratuito y accesible que facilite el trabajo 
-                de desarrolladores, estudiantes y profesionales que necesitan RUT válidos para sus 
-                proyectos y actividades.
-              </p>
-            </CardContent>
-          </Card>
+      <div className="prose prose-lg max-w-none space-y-8">
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            Nuestra Historia
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            RUTs Chile nació en 2020 como una solución simple y efectiva para generar, 
+            validar y formatear RUTs chilenos. Lo que comenzó como un proyecto personal 
+            para facilitar pruebas de software, se convirtió rápidamente en una herramienta 
+            utilizada por miles de desarrolladores, estudiantes y profesionales en todo Chile.
+          </p>
+        </section>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>¿Qué Ofrecemos?</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">✓</span>
-                  <div>
-                    <strong>Generación de RUT:</strong> Crea RUT chilenos válidos de forma instantánea 
-                    con nuestro algoritmo verificado.
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">✓</span>
-                  <div>
-                    <strong>Validación de RUT:</strong> Verifica si un RUT es válido según el 
-                    algoritmo oficial chileno.
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">✓</span>
-                  <div>
-                    <strong>Generación Masiva:</strong> Genera múltiples RUT de una sola vez para 
-                    proyectos que requieren grandes volúmenes de datos.
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">✓</span>
-                  <div>
-                    <strong>Calculadora de Dígito Verificador:</strong> Calcula el dígito verificador 
-                    para cualquier número de RUT.
-                  </div>
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            Nuestra Misión
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            Nuestra misión es proporcionar herramientas digitales gratuitas y de calidad 
+            que faciliten el trabajo diario de los chilenos. Creemos en la importancia de 
+            democratizar el acceso a tecnología útil y confiable.
+          </p>
+        </section>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>Compromiso con la Privacidad</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-gray-700">
-                Tu privacidad es nuestra prioridad. No almacenamos ningún RUT generado o validado 
-                en nuestros servidores. Todas las operaciones se realizan directamente en tu navegador, 
-                garantizando la confidencialidad total de la información.
-              </p>
-              <p className="text-gray-700">
-                Los RUT generados son completamente aleatorios y no corresponden a personas reales. 
-                Están diseñados exclusivamente para uso en pruebas, desarrollo y fines educativos.
-              </p>
-            </CardContent>
-          </Card>
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            ¿Qué Hacemos?
+          </h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            En RUTs Chile ofrecemos:
+          </p>
+          <ul className="list-disc list-inside text-gray-600 space-y-2 ml-4">
+            <li>Generación masiva de RUTs válidos para pruebas y desarrollo</li>
+            <li>Validación instantánea de RUTs existentes</li>
+            <li>Formateo correcto con puntos y guión</li>
+            <li>Información educativa sobre el sistema de RUT chileno</li>
+            <li>API gratuita para desarrolladores (próximamente)</li>
+          </ul>
+        </section>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>Tecnología y Seguridad</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-gray-700">
-                Utilizamos las últimas tecnologías web para garantizar una experiencia rápida, 
-                segura y confiable. Nuestro sitio está optimizado para funcionar en todos los 
-                dispositivos y navegadores modernos.
-              </p>
-              <p className="text-gray-700">
-                El algoritmo de validación implementado sigue estrictamente las especificaciones 
-                oficiales del sistema de RUT chileno, asegurando resultados 100% precisos.
-              </p>
-            </CardContent>
-          </Card>
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            Nuestro Compromiso
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            Nos comprometemos a mantener nuestras herramientas:
+          </p>
+          <ul className="list-disc list-inside text-gray-600 space-y-2 ml-4">
+            <li><strong>Gratuitas:</strong> Siempre accesibles sin costo</li>
+            <li><strong>Seguras:</strong> No almacenamos datos personales</li>
+            <li><strong>Confiables:</strong> Algoritmos verificados y precisos</li>
+            <li><strong>Rápidas:</strong> Respuesta inmediata sin esperas</li>
+            <li><strong>Educativas:</strong> Promovemos el entendimiento del sistema</li>
+          </ul>
+        </section>
 
-          <Card className="bg-blue-50 border-blue-200">
-            <CardHeader>
-              <CardTitle className="text-blue-900">Contacto</CardTitle>
-              <CardDescription className="text-blue-700">
-                ¿Tienes preguntas o sugerencias?
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-700">
-                Estamos aquí para ayudarte. Si tienes alguna pregunta sobre nuestras herramientas 
-                o sugerencias para mejorar nuestro servicio, no dudes en contactarnos.
-              </p>
-              <p className="text-gray-700 mt-4">
-                Visita nuestra página principal en{" "}
-                <a href="/" className="text-blue-600 hover:underline font-semibold">
-                  www.rutschile.com
-                </a>
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </main>
-      <Footer />
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            El Equipo
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            Somos un equipo de desarrolladores chilenos apasionados por crear 
+            herramientas que marquen la diferencia. Con experiencia en desarrollo 
+            web, seguridad informática y experiencia de usuario, trabajamos 
+            constantemente para mejorar y expandir nuestros servicios.
+          </p>
+        </section>
+
+        <section className="bg-blue-50 p-6 rounded-lg">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            Contáctanos
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            ¿Tienes sugerencias, comentarios o necesitas ayuda? Nos encantaría 
+            escucharte. Puedes contactarnos a través de:
+          </p>
+          <ul className="list-none text-gray-600 space-y-2 mt-4">
+            <li>📧 Email: contacto@rutschile.com</li>
+            <li>🐦 Twitter: @RutsChile</li>
+            <li>💼 LinkedIn: RUTs Chile</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            Agradecimientos
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            Agradecemos a toda la comunidad que ha confiado en nosotros y nos ha 
+            ayudado a crecer con sus comentarios y sugerencias. Este proyecto es 
+            posible gracias a ustedes.
+          </p>
+        </section>
+      </div>
     </div>
   );
 }

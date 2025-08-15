@@ -1,256 +1,249 @@
 import { Metadata } from "next";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Política de Privacidad | RUT Chile - Generador de RUT Chileno",
-  description: "Conoce nuestra política de privacidad y cómo protegemos tu información al usar el generador y validador de RUT chileno.",
-  keywords: "política privacidad, RUT Chile, protección datos, seguridad, privacidad",
+  title: "Política de Privacidad - RUTs Chile | Generador de RUT Chileno",
+  description: "Conoce nuestra política de privacidad y cómo protegemos tus datos en RUTs Chile. Tu privacidad es nuestra prioridad.",
+  keywords: "política de privacidad, privacidad, datos personales, protección de datos, RUTs Chile",
   openGraph: {
-    title: "Política de Privacidad | RUT Chile",
-    description: "Conoce nuestra política de privacidad y cómo protegemos tu información.",
+    title: "Política de Privacidad - RUTs Chile",
+    description: "Conoce cómo protegemos tu privacidad en RUTs Chile",
     url: "https://www.rutschile.com/politica-privacidad",
-    siteName: "RUT Chile",
+    siteName: "RUTs Chile",
     locale: "es_CL",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Política de Privacidad | RUT Chile",
-    description: "Conoce nuestra política de privacidad y cómo protegemos tu información.",
+    title: "Política de Privacidad - RUTs Chile",
+    description: "Conoce cómo protegemos tu privacidad en RUTs Chile",
   },
   alternates: {
     canonical: "https://www.rutschile.com/politica-privacidad",
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
 };
 
 export default function PoliticaPrivacidadPage() {
-  const breadcrumbItems = [
-    { name: "Inicio", url: "/" },
-    { name: "Política de Privacidad", url: "/politica-privacidad" },
-  ];
-
   return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar />
-      <main className="flex-grow container mx-auto px-4 py-8">
-        <Breadcrumbs items={breadcrumbItems} />
-        
-        <div className="max-w-4xl mx-auto space-y-8">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Política de Privacidad
-            </h1>
-            <p className="text-xl text-gray-600">
-              Tu privacidad es nuestra prioridad
-            </p>
-            <p className="text-sm text-gray-500 mt-2">
-              Última actualización: Enero 2025
-            </p>
-          </div>
+    <div className="container mx-auto px-4 py-8 max-w-4xl">
+      <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">
+        Política de Privacidad
+      </h1>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>1. Introducción</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-gray-700">
-                En RUT Chile (www.rutschile.com), nos comprometemos a proteger tu privacidad. 
-                Esta política describe cómo recopilamos, usamos y protegemos tu información cuando 
-                utilizas nuestro generador y validador de RUT chileno.
-              </p>
-            </CardContent>
-          </Card>
+      <div className="prose prose-lg max-w-none space-y-8">
+        <section className="bg-gray-50 p-6 rounded-lg">
+          <p className="text-gray-600 leading-relaxed">
+            <strong>Última actualización:</strong> 27 de julio de 2025
+          </p>
+          <p className="text-gray-600 leading-relaxed mt-2">
+            En RUTs Chile, tu privacidad es nuestra prioridad. Esta Política de Privacidad 
+            explica cómo recopilamos, usamos y protegemos tu información cuando utilizas 
+            nuestro sitio web www.rutschile.com.
+          </p>
+        </section>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>2. Información que NO Recopilamos</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-gray-700">
-                Es importante destacar que:
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                <li>
-                  <strong>No almacenamos RUT generados o validados:</strong> Todos los RUT que 
-                  generas o validas se procesan únicamente en tu navegador.
-                </li>
-                <li>
-                  <strong>No registramos información personal:</strong> No solicitamos ni 
-                  almacenamos nombres, correos electrónicos, ni ningún dato personal.
-                </li>
-                <li>
-                  <strong>No utilizamos cookies de rastreo:</strong> No empleamos cookies para 
-                  rastrear tu actividad en otros sitios web.
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            1. Información que NO Recopilamos
+          </h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Es importante destacar que RUTs Chile:
+          </p>
+          <ul className="list-disc list-inside text-gray-600 space-y-2 ml-4">
+            <li>NO solicita ni almacena RUTs reales de personas</li>
+            <li>NO requiere registro ni cuenta de usuario</li>
+            <li>NO guarda información personal identificable</li>
+            <li>NO almacena los RUTs generados o validados</li>
+            <li>NO utiliza cookies de rastreo invasivas</li>
+          </ul>
+        </section>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>3. Información que Recopilamos Automáticamente</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-gray-700">
-                Al visitar nuestro sitio web, podemos recopilar automáticamente cierta información 
-                técnica para mejorar nuestro servicio:
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                <li>
-                  <strong>Datos de uso anónimos:</strong> Páginas visitadas, tiempo en el sitio, 
-                  tipo de navegador, sistema operativo.
-                </li>
-                <li>
-                  <strong>Información de rendimiento:</strong> Tiempos de carga, errores técnicos 
-                  para mejorar la experiencia del usuario.
-                </li>
-                <li>
-                  <strong>Datos analíticos agregados:</strong> Estadísticas generales de uso sin 
-                  identificación personal.
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            2. Información que Recopilamos
+          </h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Recopilamos únicamente información técnica anónima para mejorar nuestro servicio:
+          </p>
+          
+          <h3 className="text-xl font-semibold text-gray-700 mt-6 mb-3">
+            2.1 Datos de Uso Anónimos
+          </h3>
+          <ul className="list-disc list-inside text-gray-600 space-y-2 ml-4">
+            <li>Páginas visitadas y tiempo de permanencia</li>
+            <li>Tipo de navegador y sistema operativo</li>
+            <li>País y ciudad de origen (no dirección específica)</li>
+            <li>Dispositivo utilizado (móvil, tablet, computadora)</li>
+            <li>Fuente de tráfico (búsqueda directa, Google, etc.)</li>
+          </ul>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>4. Uso de la Información</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-gray-700">
-                La información técnica recopilada se utiliza exclusivamente para:
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                <li>Mejorar el rendimiento y la funcionalidad del sitio web</li>
-                <li>Identificar y solucionar problemas técnicos</li>
-                <li>Entender cómo los usuarios interactúan con nuestras herramientas</li>
-                <li>Optimizar la experiencia del usuario</li>
-              </ul>
-            </CardContent>
-          </Card>
+          <h3 className="text-xl font-semibold text-gray-700 mt-6 mb-3">
+            2.2 Datos Técnicos
+          </h3>
+          <ul className="list-disc list-inside text-gray-600 space-y-2 ml-4">
+            <li>Dirección IP anonimizada</li>
+            <li>Información de rendimiento del sitio</li>
+            <li>Errores y problemas técnicos</li>
+          </ul>
+        </section>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>5. Seguridad de los Datos</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-gray-700">
-                Implementamos medidas de seguridad técnicas y organizativas para proteger 
-                cualquier información que procesemos:
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                <li>Conexión segura HTTPS en todo el sitio</li>
-                <li>Procesamiento local en el navegador para datos sensibles</li>
-                <li>No transmisión de RUT a servidores externos</li>
-                <li>Actualizaciones regulares de seguridad</li>
-              </ul>
-            </CardContent>
-          </Card>
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            3. Cómo Usamos la Información
+          </h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            La información anónima recopilada se utiliza exclusivamente para:
+          </p>
+          <ul className="list-disc list-inside text-gray-600 space-y-2 ml-4">
+            <li>Mejorar la experiencia del usuario</li>
+            <li>Optimizar el rendimiento del sitio</li>
+            <li>Entender qué funciones son más utilizadas</li>
+            <li>Detectar y corregir errores técnicos</li>
+            <li>Generar estadísticas agregadas de uso</li>
+          </ul>
+        </section>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>6. Servicios de Terceros</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-gray-700">
-                Nuestro sitio puede utilizar servicios de terceros para análisis y mejora del 
-                rendimiento:
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                <li>
-                  <strong>Vercel Analytics:</strong> Para análisis de rendimiento y uso del sitio 
-                  (datos anónimos y agregados)
-                </li>
-                <li>
-                  <strong>CDN (Content Delivery Network):</strong> Para mejorar la velocidad de 
-                  carga del sitio
-                </li>
-              </ul>
-              <p className="text-gray-700 mt-4">
-                Estos servicios tienen sus propias políticas de privacidad y procesamiento de datos.
-              </p>
-            </CardContent>
-          </Card>
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            4. Herramientas de Análisis
+          </h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Utilizamos las siguientes herramientas de análisis:
+          </p>
+          
+          <h3 className="text-xl font-semibold text-gray-700 mt-6 mb-3">
+            4.1 Vercel Analytics
+          </h3>
+          <p className="text-gray-600 leading-relaxed">
+            Vercel Analytics nos proporciona métricas de rendimiento y uso del sitio 
+            de manera completamente anónima. No rastrea usuarios individuales ni 
+            utiliza cookies persistentes.
+          </p>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>7. Tus Derechos</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-gray-700">
-                Tienes derecho a:
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                <li>Usar nuestro servicio de forma anónima</li>
-                <li>No proporcionar ninguna información personal</li>
-                <li>Desactivar JavaScript para evitar cualquier procesamiento (aunque esto limitará la funcionalidad)</li>
-                <li>Solicitar información sobre cualquier dato que podamos tener</li>
-              </ul>
-            </CardContent>
-          </Card>
+          <h3 className="text-xl font-semibold text-gray-700 mt-6 mb-3">
+            4.2 Google Analytics (Opcional)
+          </h3>
+          <p className="text-gray-600 leading-relaxed">
+            Si está habilitado, utilizamos Google Analytics con anonimización de IP 
+            activada y sin recopilación de datos demográficos detallados.
+          </p>
+        </section>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>8. Uso Responsable</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-gray-700">
-                Los RUT generados por nuestro servicio son aleatorios y no corresponden a personas 
-                reales. Están diseñados exclusivamente para:
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                <li>Pruebas de desarrollo de software</li>
-                <li>Fines educativos y de aprendizaje</li>
-                <li>Demostración de sistemas</li>
-                <li>Validación de formularios en ambientes de prueba</li>
-              </ul>
-              <p className="text-gray-700 mt-4 font-semibold">
-                El uso de RUT generados para actividades fraudulentas o ilegales está 
-                estrictamente prohibido.
-              </p>
-            </CardContent>
-          </Card>
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            5. Cookies
+          </h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            RUTs Chile utiliza cookies mínimas y esenciales:
+          </p>
+          <ul className="list-disc list-inside text-gray-600 space-y-2 ml-4">
+            <li><strong>Cookies de sesión:</strong> Se eliminan al cerrar el navegador</li>
+            <li><strong>Cookies de preferencias:</strong> Guardan configuraciones como tema oscuro (si está disponible)</li>
+            <li><strong>Cookies analíticas:</strong> Solo si aceptas, para mejorar el servicio</li>
+          </ul>
+          <p className="text-gray-600 leading-relaxed mt-4">
+            Puedes desactivar las cookies en tu navegador sin afectar la funcionalidad 
+            principal del sitio.
+          </p>
+        </section>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>9. Cambios en la Política</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-gray-700">
-                Nos reservamos el derecho de actualizar esta política de privacidad. Cualquier 
-                cambio será publicado en esta página con la fecha de actualización correspondiente.
-              </p>
-              <p className="text-gray-700">
-                Te recomendamos revisar periódicamente esta política para estar informado sobre 
-                cómo protegemos tu privacidad.
-              </p>
-            </CardContent>
-          </Card>
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            6. Seguridad de la Información
+          </h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Implementamos medidas de seguridad para proteger nuestro sitio:
+          </p>
+          <ul className="list-disc list-inside text-gray-600 space-y-2 ml-4">
+            <li>Conexión segura HTTPS en todo el sitio</li>
+            <li>Hosting en infraestructura segura de Vercel</li>
+            <li>Actualizaciones regulares de seguridad</li>
+            <li>Monitoreo de vulnerabilidades</li>
+            <li>No almacenamiento de datos sensibles</li>
+          </ul>
+        </section>
 
-          <Card className="bg-blue-50 border-blue-200">
-            <CardHeader>
-              <CardTitle className="text-blue-900">10. Contacto</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-700">
-                Si tienes preguntas sobre esta política de privacidad o sobre cómo manejamos 
-                la información, puedes contactarnos visitando nuestra página principal en{" "}
-                <a href="/" className="text-blue-600 hover:underline font-semibold">
-                  www.rutschile.com
-                </a>
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </main>
-      <Footer />
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            7. Enlaces a Terceros
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            Nuestro sitio puede contener enlaces a sitios externos como el Servicio de 
+            Impuestos Internos (SII) o el Registro Civil. No somos responsables de las 
+            prácticas de privacidad de estos sitios. Te recomendamos leer sus políticas 
+            de privacidad.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            8. Derechos del Usuario
+          </h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Aunque no recopilamos datos personales, tienes derecho a:
+          </p>
+          <ul className="list-disc list-inside text-gray-600 space-y-2 ml-4">
+            <li>Conocer qué información técnica recopilamos</li>
+            <li>Solicitar que no se recopilen datos analíticos de tu visita</li>
+            <li>Usar el sitio con cookies desactivadas</li>
+            <li>Contactarnos con preguntas sobre privacidad</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            9. Uso por Menores de Edad
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            RUTs Chile es un servicio de acceso público que no recopila información 
+            personal. Sin embargo, recomendamos que los menores de 13 años utilicen 
+            el sitio bajo supervisión de un adulto.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            10. Cambios en la Política de Privacidad
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            Nos reservamos el derecho de actualizar esta Política de Privacidad. 
+            Los cambios serán publicados en esta página con la fecha de actualización. 
+            El uso continuado del sitio después de los cambios constituye aceptación 
+            de la nueva política.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            11. Marco Legal
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            Esta política se rige por las leyes chilenas, incluyendo la Ley 19.628 
+            sobre Protección de la Vida Privada y sus modificaciones.
+          </p>
+        </section>
+
+        <section className="bg-blue-50 p-6 rounded-lg">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            12. Contacto
+          </h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Si tienes preguntas sobre esta Política de Privacidad o cómo manejamos 
+            la información, contáctanos:
+          </p>
+          <ul className="list-none text-gray-600 space-y-2">
+            <li>📧 Email: contacto@rutschile.com</li>
+            <li>🌐 Sitio web: www.rutschile.com</li>
+            <li>📍 País: Chile</li>
+          </ul>
+        </section>
+
+        <section>
+          <p className="text-center text-gray-500 text-sm mt-8">
+            Al usar RUTs Chile, aceptas esta Política de Privacidad. 
+            Gracias por confiar en nosotros.
+          </p>
+        </section>
+      </div>
     </div>
   );
 }

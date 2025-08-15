@@ -50,13 +50,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/metodologia`,
+      url: `${baseUrl}/quienes-somos`,
       lastModified: currentDate,
       changeFrequency: "monthly" as const,
-      priority: 0.6,
+      priority: 0.5,
     },
     {
-      url: `${baseUrl}/quienes-somos`,
+      url: `${baseUrl}/metodologia`,
       lastModified: currentDate,
       changeFrequency: "monthly" as const,
       priority: 0.5,
@@ -72,6 +72,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: currentDate,
       changeFrequency: "yearly" as const,
       priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/blog/autor`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.4,
     },
   ];
 
