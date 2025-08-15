@@ -49,6 +49,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily" as const,
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/metodologia`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/quienes-somos`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/politica-privacidad`,
+      lastModified: currentDate,
+      changeFrequency: "yearly" as const,
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/terminos-condiciones`,
+      lastModified: currentDate,
+      changeFrequency: "yearly" as const,
+      priority: 0.3,
+    },
   ];
 
   // Posts del blog dinámicos desde blog-data
