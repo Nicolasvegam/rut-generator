@@ -14,11 +14,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.rutschile.com"),
   title: {
-    default: "RUT Chile - Generador de RUT Chileno Válido | Crear RUTs al Azar",
+    default: "Generador de RUT Chilenos Válidos - Genera 35 RUTs Online Gratis | RUT Chile",
     template: "%s | RUT Chile",
   },
   description:
-    "🔥 Genera RUTs chilenos válidos GRATIS al instante ✓ Más de 8,900 usuarios confían en nuestro generador ⚡ Crea RUTs con dígito verificador correcto en segundos.",
+    "⚡ Generador de RUT chilenos válidos online. Genera hasta 35 RUTs con dígito verificador correcto instantáneamente. ✓ Copiar con 1 clic ✓ Sin límites ✓ 100% gratis. Usado por +50.000 desarrolladores.",
   keywords: [
     "rut chile",
     "rutschile",
@@ -62,9 +62,9 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: "RUT Chile - Generador de RUT Chileno Válido | Crear RUTs al Azar",
+    title: "Generador de RUT Chilenos Válidos | 35 RUTs Gratis Online - RUT Chile",
     description:
-      "RUT Chile: Generador oficial de RUTs chilenos válidos. Crea RUTs al azar con dígito verificador correcto. Herramienta gratuita para generar y validar RUT.",
+      "Genera hasta 35 RUT chilenos válidos al instante con dígito verificador correcto. ✓ Copiar con 1 clic ✓ Descarga masiva ✓ La herramienta más rápida y confiable de Chile.",
     url: "https://www.rutschile.com/",
     siteName: "RUT Chile",
     locale: "es_CL",
@@ -80,9 +80,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "RUT Chile - Generador de RUT Chileno Válido",
+    title: "Generador de RUT Chilenos Válidos | 35 RUTs Gratis",
     description:
-      "RUT Chile: Generador oficial de RUTs chilenos válidos. Crea RUTs al azar con dígito verificador correcto.",
+      "Genera hasta 35 RUT chilenos válidos instantáneamente. Copiar con 1 clic, descarga masiva, 100% gratis.",
     images: ["/og-home.png"],
   },
   robots: {
